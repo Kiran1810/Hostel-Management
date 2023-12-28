@@ -7,12 +7,26 @@ import Navbar from './Components/Navbar/Navlist';
 import reportWebVitals from './reportWebVitals';
 import { Provider } from 'react-redux';
 import store from './React-Redux/Store';
+import SignupPg from './Pages/SignUpPg';
+
+import LogInPg from './Pages/LogInPg';
+
 
 
 
 const router=createBrowserRouter([{
   path:"/",
   element:<Navbar/>,
+  children:[{
+    path:"Signup",
+    element:<SignupPg/>
+  },
+  {
+    path:"Login",
+    element:<LogInPg/>
+  }
+
+  ]
 
 }])
 

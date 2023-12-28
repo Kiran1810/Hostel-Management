@@ -18,24 +18,24 @@ function Navbar() {
     }, 
     {
       name: "Login",
-      slug: "/",
+      slug: "/Login",
       active: !authStatus,
   },
   {
       name: "Signup",
-      slug: "/",
+      slug: "/Signup",
       active: !authStatus,
   },
-  {
-      name: "Sponsors",
-      slug: "/",
-      active: authStatus,
-  },
-  {
-      name: "Contact-Us",
-      slug: "/",
-      active: authStatus,
-  },
+//   {
+//       name: "Sponsors",
+//       slug: "/",
+//       active: authStatus,
+//   },
+//   {
+//       name: "Contact-Us",
+//       slug: "/",
+//       active: authStatus,
+//   },
   ]
 
 
