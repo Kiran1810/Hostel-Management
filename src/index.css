@@ -2,10 +2,38 @@
 @import url('https://fonts.googleapis.com/css2?family=K2D:wght@800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=K2D&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Kelly+Slab&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Kelly+Slab&family=New+Rocker&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.text-color{
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.50) 0%, rgba(255, 255, 255, 0.00) 100%);
+background-clip: text;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+
+.E-summit{
+  background: linear-gradient(92deg, #B0C8EB 2.33%, #1C70D1 51.91%);
+background-clip: text;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+font-family: Playfair Display SC;
+font-size: 70px;
+font-style: normal;
+font-weight: 700;
+line-height: 133.551%;
+}
+
+.what{
+  color: #FFF;
+  font-family: Playfair Display SC;
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
 
 
 .heading{

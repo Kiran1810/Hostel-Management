@@ -10,6 +10,7 @@ import store from './React-Redux/Store';
 import SignupPg from './Pages/SignUpPg';
 import HomePage from './Pages/HomePg';
 
+
 import LogInPg from './Pages/LogInPg';
 
 
@@ -26,6 +27,7 @@ const router=createBrowserRouter([{
     path:"Login",
     element:<LogInPg/>
   }
+  
 
   ]
 

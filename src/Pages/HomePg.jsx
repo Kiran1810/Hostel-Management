@@ -5,7 +5,8 @@ import constellationImage from '../Assets/constillation.png';
 import jupiterImage from "../Assets/jupitor.png";
 import Navbar from '../Components/Navbar/Navlist';
 import "../index.css"
-import Hindi from "../Assets/hindi_quote.png"
+import Hindi from "../Assets/hindi_quote.png";
+import AboutUsPage from './AboutusPg';
 
 function HomePage() {
   return (
@@ -29,7 +30,7 @@ function HomePage() {
       <div className=" font-K2D text-left text-gray-300">
         <Typography variant="h4" size-4xl>E-Cell NIT HAMIRPUR's</Typography>
       </div>
-      <div className="font-k2d text-center text-gray-300  sm:text-4xl md:text-5xl lg:text-8xl ">
+      <div className="font-k2d text-center text-color text-gray-300 text-shadow  sm:text-4xl md:text-5xl lg:text-8xl ">
         ESUMMIT'24
       </div>
       </div>
@@ -42,7 +43,7 @@ function HomePage() {
         className=" sm:w-25 sm:h-25 object-contain "
       />
 
-      <div className="text-center text-gray-300 mt-4">
+      <div className="text-center text-gray-300 mt-4 font-Rocker">
         <Typography variant="h4">24-26 January</Typography>
       </div>
       <img
@@ -51,6 +52,7 @@ function HomePage() {
         className="sm:w-45 sm:h-48  md:w-45 md:h-48 lg:w-50 lg:h-50 object-contain mr-auto"
       />
     </div>
+    <AboutUsPage/>
     </>
   );
 }
