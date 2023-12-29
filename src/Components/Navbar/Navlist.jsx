@@ -3,6 +3,7 @@ import LogoutBtn from './Logoutbtn'
 import { Link } from 'react-router-dom'
 import {useSelector} from 'react-redux'
 import { useNavigate } from 'react-router-dom'
+import LogoImage from "../../Assets/logo.png"
 
 function Navbar() {
   const authStatus = useSelector((state) => state.auth.status)
@@ -45,7 +46,11 @@ function Navbar() {
         <nav className='flex'>
           <div className='mr-4'>
             <Link to='/'>
-              {/* <Logo width='70px'   /> */}
+            <img
+        src={LogoImage}
+        alt="LogoImage"
+        className="w-14 h-14 ml-8"
+      />
 
               </Link>
           </div>

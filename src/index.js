@@ -8,6 +8,7 @@ import reportWebVitals from './reportWebVitals';
 import { Provider } from 'react-redux';
 import store from './React-Redux/Store';
 import SignupPg from './Pages/SignUpPg';
+import HomePage from './Pages/HomePg';
 
 import LogInPg from './Pages/LogInPg';
 
@@ -16,7 +17,7 @@ import LogInPg from './Pages/LogInPg';
 
 const router=createBrowserRouter([{
   path:"/",
-  element:<Navbar/>,
+  element:<HomePage/>,
   children:[{
     path:"Signup",
     element:<SignupPg/>

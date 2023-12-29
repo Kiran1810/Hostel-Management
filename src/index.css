@@ -1,7 +1,16 @@
+
+@import url('https://fonts.googleapis.com/css2?family=K2D:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=K2D&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kelly+Slab&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+
+.heading{
+  font-family: 'K2D', sans-serif;
+}
 
 body {
   margin: 0;
