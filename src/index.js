@@ -1,45 +1,30 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import { RouterProvider, createBrowserRouter } from 'react-router-dom';
-import Navbar from './Components/Navbar/Navlist';
-import reportWebVitals from './reportWebVitals';
-import { Provider } from 'react-redux';
-import store from './React-Redux/Store';
-import SignupPg from './Pages/SignUpPg';
-import HomePage from './Pages/HomePg';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./App";
+// import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import reportWebVitals from "./reportWebVitals";
+import { Provider } from "react-redux";
+import store from "./React-Redux/Store";
+import SignupPg from "./Pages/SignUpPg";
+import HomePage from "./Pages/HomePg";
 
+import LogInPg from "./Pages/LogInPg";
 
-import LogInPg from './Pages/LogInPg';
-
-
-
-
-const router=createBrowserRouter([{
-  path:"/",
-  element:<HomePage/>,
-  children:[{
-    path:"Signup",
-    element:<SignupPg/>
-  },
-  {
-    path:"Login",
-    element:<LogInPg/>
-  }
-  
-
-  ]
-
-}])
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <React.StrictMode>
-   <Provider store={store}>
-   <RouterProvider router={router}/>
-    </Provider>
-  </React.StrictMode>
+    <React.StrictMode>
+        <Provider store={store}>
+            <Router>
+                <Routes>
+                    <Route index element={<HomePage />} />
+                    <Route path="/signup" element={<SignupPg />} />
+                    <Route path="/login" element={<LogInPg />} />
+                </Routes>
+            </Router>
+        </Provider>
+    </React.StrictMode>
 );
 
 reportWebVitals();
