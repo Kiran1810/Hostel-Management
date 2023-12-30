@@ -7,6 +7,7 @@ import Navbar from '../Components/Navbar/Navlist';
 import "../index.css"
 import Hindi from "../Assets/hindi_quote.png";
 import AboutUsPage from './AboutusPg';
+import Events from "./Events"
 
 function HomePage() {
   return (
@@ -53,7 +54,10 @@ function HomePage() {
       />
     </div>
     <AboutUsPage/>
+    <Events/>
+
     </>
+    
   );
 }
 

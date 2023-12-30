@@ -34,10 +34,33 @@ line-height: 133.551%;
   font-weight: 400;
   line-height: normal;
 }
-
+.card{ border-radius: 24.043px;
+background: radial-gradient(123.29% 113.27% at 0% 0%, rgba(0, 56, 144, 0.00) 0%, rgba(46, 104, 173, 0.00) 0%, #000 100%);
+box-shadow: 0px 3.005px 3.005px 7.513px rgba(0, 0, 0, 0.25);
+}
+.card2{border-radius: 24.043px;
+  background: radial-gradient(140.29% 138.31% at 97.81% -3.1%, rgba(46, 104, 173, 0.00) 0%, rgba(0, 56, 144, 0.00) 0%, #000 100%);
+  box-shadow: 0px 3.005px 3.005px 7.513px rgba(0, 0, 0, 0.25);
+}
+.card3{
+  border-radius: 24.043px;
+background: radial-gradient(104.34% 108.29% at 103.23% 47.53%, rgba(0, 56, 144, 0.00) 0%, rgba(46, 104, 173, 0.00) 0%, #000 100%);
+box-shadow: 0px 3.005px 3.005px 7.513px rgba(0, 0, 0, 0.25);
+}
+.card4{
+  border-radius: 24.043px;
+  background: radial-gradient(85.49% 93.06% at 100.13% 100.11%, rgba(0, 56, 144, 0.00) 0%, rgba(46, 104, 173, 0.00) 0%, #000 100%);
+  box-shadow: 0px 3.005px 3.005px 7.513px rgba(0, 0, 0, 0.25);
+}
 
 .heading{
   font-family: 'K2D', sans-serif;
+}
+.over{
+  border-radius: 72.844px;
+border: 1px solid #FFF;
+background: linear-gradient(124deg, #001E34 2.21%, rgba(0, 60, 131, 0.22) 100.04%);
+box-shadow: 0px 9.106px 9.106px 22.764px rgba(0, 0, 0, 0.25);
 }
 
 body {

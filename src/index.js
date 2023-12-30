@@ -11,6 +11,7 @@ import SignupPg from "./Pages/SignUpPg";
 import HomePage from "./Pages/HomePg";
 
 import LogInPg from "./Pages/LogInPg";
+import EventCard from "./Components/Cards/EventCard";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
