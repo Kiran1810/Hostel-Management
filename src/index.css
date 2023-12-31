@@ -62,7 +62,36 @@ border: 1px solid #FFF;
 background: linear-gradient(124deg, #001E34 2.21%, rgba(0, 60, 131, 0.22) 100.04%);
 box-shadow: 0px 9.106px 9.106px 22.764px rgba(0, 0, 0, 0.25);
 }
+.sponsors{
+  background: linear-gradient(91deg, #B0C8EB 32.98%, rgba(26, 112, 208, 0.90) 64.45%);
+background-clip: text;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent; 
+}
 
+.background{
+  background: linear-gradient(104deg, rgba(149, 175, 244, 0.19) 0%, rgba(56, 101, 154, 0.02) 100%); 
+}
+.team{
+  color: #FFF;
+text-align: center;
+font-family: Playfair Display SC;
+font-size: 28px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+letter-spacing: 1.4px; 
+
+}
+.team2{
+  color: #C9C9C9;
+font-family: Playfair Display SC;
+font-size: 28px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+letter-spacing: 1.4px; 
+}
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',

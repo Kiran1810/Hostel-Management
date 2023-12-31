@@ -68,7 +68,7 @@ function EventCard() {
   return (
     <>
       <div
-        className={`card ${activeCardClass} w-max h-60 text-white flex flex-col   items-center space-y-3  `}
+        className={`card ${activeCardClass} w-80 h-80 text-white flex flex-col   items-center space-y-3  `}
         onClick={handleCardClick}
       >
         <img src={CardIcon} alt="cardIcon" className="h-14 w-14 mt-5" />

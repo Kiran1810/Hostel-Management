@@ -8,6 +8,8 @@ import "../index.css"
 import Hindi from "../Assets/hindi_quote.png";
 import AboutUsPage from './AboutusPg';
 import Events from "./Events"
+import Sponsors from './Sponsors';
+import TeamPg from './TeamPg';
 
 function HomePage() {
   return (
@@ -55,6 +57,14 @@ function HomePage() {
     </div>
     <AboutUsPage/>
     <Events/>
+    <div className="bg-black  ">
+    <Sponsors/>
+    </div>
+    <div className="bg-black ">
+    <TeamPg/>
+    </div>
+   
+
 
     </>
     
