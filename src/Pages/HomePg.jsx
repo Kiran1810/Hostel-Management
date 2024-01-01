@@ -11,6 +11,7 @@ import Events from "./Events"
 import Sponsors from './Sponsors';
 import TeamPg from './TeamPg';
 import SpeakersPage from './SpeakersPg';
+import Footer from '../Components/Footer/Footer';
 
 function HomePage() {
   return (
@@ -70,7 +71,9 @@ function HomePage() {
     <TeamPg/>
     </div>
    
-
+    <div className="bg-black py-14">
+    <Footer/>
+    </div>
 
     </>
     
