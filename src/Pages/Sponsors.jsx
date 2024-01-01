@@ -5,7 +5,7 @@ import SponsorImage from "../Assets/SponsorPg.png"
 
 function Sponsors(){
     return(
-        <div className="flex flex-col pb-24  background">
+        <div className="flex flex-col pb-24  background ">
             <div className="flex flex-row-reverse">
                 <img
                 src={SponsorImage}

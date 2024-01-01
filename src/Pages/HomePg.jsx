@@ -10,6 +10,7 @@ import AboutUsPage from './AboutusPg';
 import Events from "./Events"
 import Sponsors from './Sponsors';
 import TeamPg from './TeamPg';
+import SpeakersPage from './SpeakersPg';
 
 function HomePage() {
   return (
@@ -56,7 +57,12 @@ function HomePage() {
       />
     </div>
     <AboutUsPage/>
+ 
+   
     <Events/>
+    <div className=''>
+    <SpeakersPage />
+    </div>
     <div className="bg-black  ">
     <Sponsors/>
     </div>
