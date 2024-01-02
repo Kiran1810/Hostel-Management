@@ -2,12 +2,12 @@
 import React, { useState } from "react";
 import SpeakerImage2 from "../../Assets/Speaker2Image.png";
 
-function SpeakerCard({ onClick }) {
+function SpeakerCard({ onClick ,image,name,description }) {
   const [showParagraph, setShowParagraph] = useState(false);
 
   const handleClick = () => {
     // Call the provided onClick function when the card is clicked
-    onClick("ANURAG KASYAP");
+    onClick();
     // Toggle the state to show/hide the paragraph
     setShowParagraph(!showParagraph);
   };
@@ -16,17 +16,17 @@ function SpeakerCard({ onClick }) {
     <div className="flex flex-col items-center Speaker box space-y-4 mt-8 " onClick={handleClick}>
       {showParagraph ? (
         <div className="text-white">
-          More about ANURAG KASYAP: Lorem ipsum...
+         {description}
         </div>
       ) : (
         <div className="w-32 h-32">
           <img
-            src={SpeakerImage2}
+            src={image}
             alt="speakerImage"
-            className="object-contain"
+            className="object-contain rounded-full"
           />
           <div className="space-y-3 text-white">
-            <div>ANURAG KASYAP</div>
+            <div>{name}</div>
             <div>Director and Producer</div>
           </div>
         </div>

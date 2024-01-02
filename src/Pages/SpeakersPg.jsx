@@ -1,15 +1,24 @@
 import React, { useState } from "react";
 import SpeakersImage from "../Assets/SpeakersImage.png";
 import SpeakerCard from '../Components/Cards/SpeakerCard';
+import { useEffect } from "react";
+import axios from "axios"
 
 function SpeakersPage() {
+  const [speaker,setSpeaker]=useState([])
+  useEffect(()=>{
+  axios.get(`https://e-cell-backend2k24.onrender.com/esummit/speaker/`)
+  .then((response)=>(setSpeaker(response.data),
+  console.log("response of the speaker ",response)))
 
-  const [selectedSpeaker, setSelectedSpeaker] = useState(null);
+  },[])
 
-  const handleSpeakerClick = (speakerName) => {
+ const [selectedSpeaker, setSelectedSpeaker] = useState(null);
+
+  const handleSpeakerClick = (name) => {
     // You can customize the content based on the selected speaker
     // For now, let's just display a generic message
-    setSelectedSpeaker(`More about ${speakerName}: Lorem ipsum...`);
+    setSelectedSpeaker(`More about ${name}: Lorem ipsum...`);
   };
 
   return (
@@ -35,22 +44,13 @@ function SpeakersPage() {
         </div>
       </div>
       <div className="grid grid-cols-4 ml-16 mr-20">
-      <SpeakerCard onClick={handleSpeakerClick}/>
-      <SpeakerCard onClick={ handleSpeakerClick}/>
-      <SpeakerCard onClick={ handleSpeakerClick}/>
-      <SpeakerCard onClick={ handleSpeakerClick}/>
-      <SpeakerCard onClick={ handleSpeakerClick}/>
-      <SpeakerCard onClick={ handleSpeakerClick}/>
-      <SpeakerCard onClick={ handleSpeakerClick}/>
-      <SpeakerCard onClick={ handleSpeakerClick}/>
+
+       {speaker && speaker.map((speaker,index) =>(<SpeakerCard onClick={handleSpeakerClick} key={index} {...speaker}/>))
+      }
+     
       
       </div>
 
-      {/* {selectedSpeaker && (
-        <div className="text-white mt-4 ml-16 mr-20">
-          <p>{selectedSpeaker}</p>
-        </div>
-      )} */}
 
     </div>
 

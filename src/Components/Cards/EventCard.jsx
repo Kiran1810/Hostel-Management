@@ -9,7 +9,7 @@ import {
   DialogFooter,
 } from "@material-tailwind/react";
 
-export function DialogDefault({ isOpen, onClose }) {
+export function DialogDefault({ isOpen, onClose, name,description,prize}) {
   return (
     <Dialog
       open={isOpen}
@@ -18,9 +18,9 @@ export function DialogDefault({ isOpen, onClose }) {
     >
       <img src={CardIcon} alt="cardIcon" className="h-44 w-44 mt-5" />
 
-      <DialogHeader>Ted The Trex</DialogHeader>
+      <DialogHeader>{name}</DialogHeader>
       <DialogBody className="ml-11 mr-11 mb-5">
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates fugit quod earum, mollitia, officia possimus assumenda praesentium quisquam expedita voluptatibus quidem voluptatem aliquam exercitationem neque magni sed culpa est rem? Nihil, perferendis. Harum, voluptatum impedit! Eaque, fugit consequatur cum ut tenetur sequi, modi laborum ipsa eos neque necessitatibus laboriosam similique.
+        {description}
       </DialogBody>
       <DialogFooter className="flex flex-row justify-between">
         <div className="flex flex-row mr-20">
@@ -30,7 +30,7 @@ export function DialogDefault({ isOpen, onClose }) {
           </div>
           <div className="flex flex-row items-center">
             <img src={Loyalty} alt="loyalty" className="mr-2" />
-            <div>money</div>
+            <div>{prize}</div>
           </div>
         </div>
         <Button variant="gradient" color="green" onClick={onClose}>
@@ -43,7 +43,7 @@ export function DialogDefault({ isOpen, onClose }) {
 
 const cards = ["card", "card2", "card3", "card4"];
 
-function EventCard() {
+function EventCard({name,event_date,description}) {
   const [activeCardIndex, setActiveCardIndex] = useState(0);
   const [isDialogOpen, setDialogOpen] = useState(false);
 
@@ -73,13 +73,13 @@ function EventCard() {
       >
         <img src={CardIcon} alt="cardIcon" className="h-14 w-14 mt-5" />
         <div className="ml-8 mr-8 mt-2 pb-3 space-y-4">
-          <div className="font-kelly">Event name</div>
+          <div className="font-kelly">{name}</div>
           <div className="font-kelly">Coming In</div>
-          <div className="font-Rocker">24:24:24</div>
+          <div className="font-Rocker">{event_date}</div>
         </div>
       </div>
 
-      <DialogDefault isOpen={isDialogOpen} onClose={handleCloseDialog} />
+      <DialogDefault  name={name} description={description} isOpen={isDialogOpen} onClose={handleCloseDialog} />
     </>
   );
 }
