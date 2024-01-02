@@ -26,11 +26,7 @@ function Event(){
             </div>
             <div className=" grid grid-cols-4 ml-10"> 
             {event && event.map((event,index)=>(<EventCard key={index} {...event}/>))}
-                {/* <EventCard/>
-                <EventCard/>
-                <EventCard/>
-                <EventCard/>
-                <EventCard/> */}
+                
             </div>
             </div>
         </>

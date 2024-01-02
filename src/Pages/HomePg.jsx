@@ -13,6 +13,8 @@ import TeamPg from './TeamPg';
 import SpeakersPage from './SpeakersPg';
 import Footer from '../Components/Footer/Footer';
 
+import IdPage from './IdPg';
+
 function HomePage() {
   return (
     <>
@@ -61,6 +63,7 @@ function HomePage() {
  
    
     <Events/>
+   
     <div className=''>
     <SpeakersPage />
     </div>
