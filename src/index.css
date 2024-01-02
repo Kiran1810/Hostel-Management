@@ -108,6 +108,60 @@ border-radius: 16px;
 border: 2px solid rgba(0, 32, 82, 0.18);
 background: rgba(0, 32, 82, 0.08); 
 }
+.Id{
+  width: 893px;
+height: 1117px; 
+}
+.InId{
+  width: 378px;
+height: 529.551px;
+flex-shrink: 0; 
+fill: #076FAA; 
+}
+.small{
+  width: 332px;
+height: 283px;
+flex-shrink: 0; 
+border-radius: 16px;
+background: rgba(255, 255, 255, 0.83);
+
+}
+.volunteer{
+  width: 171px;
+height: 33px;
+flex-shrink: 0; 
+color: #0A093F;
+font-family: K2D;
+font-size: 27px;
+font-style: normal;
+font-weight: 800;
+line-height: normal;
+letter-spacing: 1.35px; 
+}
+.downLoad{
+  display: flex;
+width: 575px;
+padding: 18px 285px;
+justify-content: center;
+align-items: center;
+gap: 10px; 
+border-radius: 16px;
+border: 2px solid rgba(0, 32, 82, 0.18);
+background: #002052; 
+}
+
+.cardName{
+  width: 183.486px;
+height: 31.894px;
+flex-shrink: 0; 
+color: #FFF;
+font-family: K2D;
+font-size: 22.54px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+letter-spacing: 1.127px; 
+}
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',

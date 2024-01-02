@@ -6,7 +6,7 @@ function ThirdYear(){
              <img
                     src="https://docs.material-tailwind.com/img/face-2.jpg"
                     alt="img"
-                    className="p-0.5 rounded-full w-64 h-64 "
+                    className="p-0.5 rounded-lg w-64 h-64 "
 
 
               />
