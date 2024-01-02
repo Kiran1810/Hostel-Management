@@ -1,6 +1,6 @@
 import React from "react";
 import Login from "../Components/Login/Login";
-import LoginImg from "../Assets/LoginpageImage.png";
+import LoginImg from "../Assets/Login.jpeg";
 
 function LogInPg() {
   const flagStyle = {
@@ -11,14 +11,14 @@ function LogInPg() {
   };
 
   return (
-    <div className="relative border-b rounded-b-[2.5rem] overflow-hidden h-screen">
+    <div className="relative border-b rounded-b-[2.5rem] overflow-hidden   h-screen">
       <div className="flex flex-row h-full">
        
         <div className="w-full md:w-1/2 p-8">
           <Login />
         </div>
     
-        <div className="hidden md:block w-1/2" style={flagStyle}></div>
+        <div className="hidden md:block w-2/3" style={flagStyle}></div>
       </div>
     </div>
   );

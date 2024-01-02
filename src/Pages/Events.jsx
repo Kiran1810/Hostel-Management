@@ -1,8 +1,11 @@
 import React from "react";
 import Group from "../Assets/Group.png"
 import EventCard from "../Components/Cards/EventCard";
+import { useEffect } from "react";
+import axios from "axios";
 
 function Event(){
+   
 
     return(
         <>
