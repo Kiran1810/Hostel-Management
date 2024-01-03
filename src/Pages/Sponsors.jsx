@@ -1,30 +1,23 @@
 import React from "react";
+import  {useState, useEffect } from "react"
 import Images from "../Components/Images/Images";
 import SponsorImage from "../Assets/SponsorPg.png"
-import { useEffect ,useState} from "react";
 import axios from "axios";
 
 
 
 function Sponsors(){
-    const [sponsor,setSponsors]=useState([])
-
+    const [sponser,setSponser]=useState([])
     useEffect(()=>{
-         axios.get(
-            `https://e-cell-backend2k24.onrender.com/esummit/sponsor/`
-         )
-         .then((response)=>(setSponsors(response.data),
-         console.log("the response is ",response)))
-        
-
-       },[])
-
+     axios.get(`https://e-cell-backend2k24.onrender.com/esummit/sponsor/`)
+     .then((response)=>(setSponser(response.data),
+     console.log("response",response)))
+    },[])
     return(
-        <div className="flex flex-col pb-24  background">
+        <div className="flex flex-col pb-24  background ">
             <div className="flex flex-row-reverse">
                 <img
                 src={SponsorImage}
-                alt="image"
                 className="w-80"
 
                 />
@@ -34,13 +27,8 @@ function Sponsors(){
                     Our Sponsors
                 </div>
                 <div className=" items-start gap-x-14 grid grid-cols-5">
-                {
-                   sponsor && sponsor.map((sponsor, index) => (
-                        <Images key={index} {...sponsor} />
-                    ))}
-                    
+                    {sponser && sponser.map((sponser,index)=>( <Images key={index} {...sponser}/>))}
                    
-                  
                 </div>
                 <div className="text-center font-bold tracking-widest text-6xl sponsors">
                     Our Invester

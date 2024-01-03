@@ -34,6 +34,21 @@ line-height: 133.551%;
   font-weight: 400;
   line-height: normal;
 }
+.Speaker{
+  border-radius: 15.797px 31.594px;
+background: radial-gradient(148.29% 147.31% at 0% 0%, #D3D8E0 0%, rgba(0, 0, 0, 0.04) 0.62%, rgba(54, 54, 54, 0.25) 42.19%, rgba(0, 32, 82, 0.54) 100%);
+box-shadow: 0px 3.949px 4.937px 0px rgba(42, 42, 42, 0.25);
+}
+
+.box{
+  width: 311px;
+  height: 338.644px;
+  padding: 40.48px 33.794px 51.541px 33.096px;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+  display:flex
+  }
 .card{ border-radius: 24.043px;
 background: radial-gradient(123.29% 113.27% at 0% 0%, rgba(0, 56, 144, 0.00) 0%, rgba(46, 104, 173, 0.00) 0%, #000 100%);
 box-shadow: 0px 3.005px 3.005px 7.513px rgba(0, 0, 0, 0.25);
@@ -67,6 +82,23 @@ box-shadow: 0px 9.106px 9.106px 22.764px rgba(0, 0, 0, 0.25);
 background-clip: text;
 -webkit-background-clip: text;
 -webkit-text-fill-color: transparent; 
+}
+.sponserCard{
+  border-radius: 72.844px;
+border: 1px solid #FFF;
+box-shadow: 0px 9.106px 9.106px 22.764px rgba(0, 0, 0, 0.25);
+width: 1201px;
+height: 800px;
+}
+.sponsersName{
+  color: #FFF;
+
+font-family: Playfair Display SC;
+font-size: 45.673px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+letter-spacing: 2.284px;
 }
 
 .background{

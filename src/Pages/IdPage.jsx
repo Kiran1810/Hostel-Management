@@ -1,7 +1,6 @@
 import React from "react";
 import IdBg from "../Assets/Id.svg";
 import Bg from "../Assets/bg.svg";
-import Logo from "../Assets/logo.png"
 
 function IdCard() {
   return (

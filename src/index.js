@@ -13,6 +13,7 @@ import HomePage from "./Pages/HomePg";
 import LogInPg from "./Pages/LogInPg";
 import EventCard from "./Components/Cards/EventCard";
 import IdCard from "./Pages/IdPage";
+import IdPage from "./Pages/IdPg";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -20,9 +21,9 @@ root.render(
         <Provider store={store}>
             <Router>
                 <Routes>
-                    <Route index element={<IdCard/>} />
+                    <Route index element={<HomePage/>} />
                     <Route path="/signup" element={<SignupPg />} />
-                    <Route path="/login" element={<LogInPg />} />
+                    <Route path="/login" element={<IdPage />} />
                 </Routes>
             </Router>
         </Provider>

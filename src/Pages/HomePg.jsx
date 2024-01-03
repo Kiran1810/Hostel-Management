@@ -10,6 +10,10 @@ import AboutUsPage from './AboutusPg';
 import Events from "./Events"
 import Sponsors from './Sponsors';
 import TeamPg from './TeamPg';
+import SpeakersPage from './SpeakersPg';
+import Footer from '../Components/Footer/Footer';
+
+import IdPage from './IdPg';
 
 function HomePage() {
   return (
@@ -56,7 +60,13 @@ function HomePage() {
       />
     </div>
     <AboutUsPage/>
+ 
+   
     <Events/>
+   
+    <div className=''>
+    <SpeakersPage />
+    </div>
     <div className="bg-black  ">
     <Sponsors/>
     </div>
@@ -64,7 +74,9 @@ function HomePage() {
     <TeamPg/>
     </div>
    
-
+    <div className="bg-black py-14">
+    <Footer/>
+    </div>
 
     </>
     
