@@ -3,7 +3,7 @@ import Id from '../Components/Idcard/Id';
 import IdCardImage from "../Assets/IdImage.png"
 
 
-function IdPage(){
+function TogglePage(){
     const flagStyle = {
         backgroundImage: `url(${IdCardImage})`,
         backgroundSize: "cover",
@@ -24,4 +24,4 @@ function IdPage(){
     )
 }
 
-export default IdPage
+export default TogglePage

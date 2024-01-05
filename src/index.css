@@ -194,6 +194,14 @@ font-weight: 400;
 line-height: normal;
 letter-spacing: 1.127px; 
 }
+.dropDown{
+  width: 600px;
+height: 40px;
+flex-shrink: 0; 
+border-radius: 16px;
+border: 2px solid rgba(0, 32, 82, 0.18);
+background: rgba(0, 32, 82, 0.08);
+}
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',

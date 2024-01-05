@@ -13,7 +13,7 @@ import TeamPg from './TeamPg';
 import SpeakersPage from './SpeakersPg';
 import Footer from '../Components/Footer/Footer';
 
-import IdPage from './IdPg';
+import IdPage from './TogglePage';
 
 function HomePage() {
   return (

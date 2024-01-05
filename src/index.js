@@ -13,19 +13,26 @@ import HomePage from "./Pages/HomePg";
 import LogInPg from "./Pages/LogInPg";
 import EventCard from "./Components/Cards/EventCard";
 import IdCard from "./Pages/IdPage";
-import IdPage from "./Pages/IdPg";
+import TogglePage from "./Pages/TogglePage";
+import { GoogleOAuthProvider } from "@react-oauth/google";
+
+
+const ci =
+    "109486718524-bbvbvsoobs37lqjlo9urq80mo457hbiu.apps.googleusercontent.com";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
     <React.StrictMode>
         <Provider store={store}>
-            <Router>
-                <Routes>
-                    <Route index element={<HomePage/>} />
-                    <Route path="/signup" element={<SignupPg />} />
-                    <Route path="/login" element={<IdPage />} />
-                </Routes>
-            </Router>
+            <GoogleOAuthProvider clientId={ci}>
+                <Router>
+                    <Routes>
+                        <Route index element={<HomePage/>} />
+                        <Route path="/signup" element={<SignupPg />} />
+                        <Route path="/login" element={<TogglePage />} />
+                    </Routes>
+                </Router>
+            </GoogleOAuthProvider>
         </Provider>
     </React.StrictMode>
 );

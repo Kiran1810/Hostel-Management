@@ -6,6 +6,12 @@ import { useNavigate } from "react-router-dom";
 import Cookies from "js-cookie"
 import {login} from "../../React-Redux/Auth-Slice"
 import { useDispatch } from "react-redux";
+import GoogleLoginButton from "../GoogleLogin/GoogleLogin";
+import { GoogleLogin } from "@react-oauth/google";
+import { jwtDecode } from "jwt-decode";
+
+
+
 function Signup(){
    const [userData,setUserData]=useState({
     email: "",
@@ -25,8 +31,8 @@ function Signup(){
           console.log(response)
           Cookies.set('mtToken',response.data.token.access,
           {expires:30})
-          dispatch(login(response))
-          navigate('/')
+          dispatch(login(response.data))
+          navigate('/login')
 
           
 
@@ -35,6 +41,40 @@ function Signup(){
     }
   }
  
+
+  const handleGoogleLoginSuccess = async (profile) => {
+    try {
+        console.log("Google login success: profile karan", profile);
+        const credentials = profile.credential;
+
+        const decodedToken = jwtDecode(credentials);
+
+        console.log("kara detail", decodedToken);
+
+        const userDetail = {
+            name: decodedToken.name,
+            email: decodedToken.email,
+            picture: decodedToken.picture,
+        };
+
+        const response = await axios.post(
+            "https://2f98-2405-201-7005-9045-80a0-5653-6e6a-480b.ngrok-free.app/auth/google/",
+            userDetail
+        );
+        console.log(response.data.data.token.access);
+        dispatch(login(response.data.data));
+
+        Cookies.set("myToken", response.data.data.token.access, {
+            expires: 30,
+        });
+        dispatch(login(response.data.data));
+
+        navigate("/home");
+    } catch (error) {
+        console.error("Server authentication error:", error);
+        // toast("Google login failed. Please try again.");
+    }
+};
 
     return(
         <div className="flex flex-col  h-screen justify-center items-start px-4 space-y-8">
@@ -141,6 +181,16 @@ function Signup(){
                     >
                         Sign Up
                     </Button>
+
+                    <GoogleLoginButton />
+                    <GoogleLogin
+                        onSuccess={handleGoogleLoginSuccess}
+                        onError={() =>
+                            // toast("Google login failed. Please try again.")
+                            console.log("there is error")
+                        }
+                        className="mt-4 bg-red-500 text-white hover:bg-red-700 py-2 px-4 rounded"
+                    />
           </form>
         </div>
     )
