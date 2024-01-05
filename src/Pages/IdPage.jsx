@@ -18,17 +18,12 @@ function IdCard() {
   })
   const user=useSelector((state)=>state.auth.userData)
 
- 
-    
-
-
-
   const downloadAsPDF = () => {
     const input = idCardRef.current;
   
   
     let opt = {
-      margin:       [10, 0, 10, 0],
+      margin: [10, 0, 10, 0],
       filename: 'IDcard.pdf',
       image: { type: 'jpeg' },
       html2canvas: { useCORS: true, scale: 2 }
