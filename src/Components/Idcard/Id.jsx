@@ -7,7 +7,7 @@ import { Select, Option } from "@material-tailwind/react";
 
 function Id() {
     const user = useSelector((state) => state.auth.userData);
-
+    const [checkNit, setCheckNit] = useState(true);
     const fileInputRef = useRef(null);
     const [selectedImage, setSelectedImage] = useState(null);
     const [detail, setDetail] = useState({
@@ -17,6 +17,10 @@ function Id() {
         college_name: "nit-h",
     });
 
+    const handleSelectChange = (event) => {
+        const selectedValue = event.target.value;
+        setCheckNit(selectedValue === "Nit Hamirpur");
+    };
     const handleSignUp = () => {
         const authToken = Cookies.get("myToken");
 
@@ -39,8 +43,9 @@ function Id() {
             });
     };
     useEffect(() => {
-        const authToken2 = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzA3MDUzNTE2LCJpYXQiOjE3MDQ0NjE1MTYsImp0aSI6IjUxZWNiYzgxMjYzYzQzNzY5ODgzNzg1MDhkMDcyZWM1IiwidXNlcl9pZCI6MjZ9.qVsV3V1RZ7-jM-3c1XraxlDQWTMbGQVJzjkAjM3PGnA";
-        
+        const authToken2 =
+            "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzA3MDUzNTE2LCJpYXQiOjE3MDQ0NjE1MTYsImp0aSI6IjUxZWNiYzgxMjYzYzQzNzY5ODgzNzg1MDhkMDcyZWM1IiwidXNlcl9pZCI6MjZ9.qVsV3V1RZ7-jM-3c1XraxlDQWTMbGQVJzjkAjM3PGnA";
+
         const authToken = Cookies.get("myToken");
 
         // if (authToken2 === authToken){
@@ -158,38 +163,12 @@ function Id() {
                         </defs>
                     </svg>
                 </div>
-                <div className="flex flex-row space-x-6">
-                    <div className="text-slate-500">
-                        <label>Contact Number</label>
-                        <Input
-                            type="Name"
-                            style={{ height: "40px", width: "600px" }}
-                            className="!border !border-gray-300 rounded  text-gray-900 shadow-lg shadow-gray-900/5 ring-4 ring-transparent placeholder:text-gray-500  bg-gray-200 focus:!border-gray-900 focus:!border-t-gray-900 focus:ring-gray-900/10"
-                            labelProps={{
-                                className: "hidden",
-                            }}
-                            onChange={(e) =>
-                                setDetail({
-                                    ...detail,
-                                    number: e.target.value,
-                                })
-                            }
-                            containerProps={{ className: "min-w-[100px]" }}
-                        />
-                        <input
-                            type="file"
-                            ref={fileInputRef}
-                            style={{ display: "none" }}
-                            onChange={handleFileChange}
-                        />
-                    </div>
-                </div>
-                <div className="text-slate-500">
-                    <label>Name of Institution</label>
+                <div className="text-slate-500 w-full">
+                    <label>Contact Number</label>
+
                     <Input
                         type="text"
-                        style={{ height: "40px", width: "600px" }}
-                        className="!border !border-gray-300 rounded bg-gray-200 text-gray-900 shadow-lg shadow-gray-900/5 ring-4 ring-transparent placeholder:text-gray-500 focus:!border-gray-900 focus:!border-t-gray-900 focus:ring-gray-900/10"
+                        className="  !border !border-gray-300 rounded bg-gray-200 text-gray-900 shadow-lg shadow-gray-900/5 ring-4 ring-transparent placeholder:text-gray-500 focus:!border-gray-900 focus:!border-t-gray-900 focus:ring-gray-900/10"
                         labelProps={{
                             className: "hidden",
                         }}
@@ -197,18 +176,44 @@ function Id() {
                     />
                 </div>
 
-                <div className="dropDown text-slate-500">
-                    <label>Select the institute</label>
-
-                    <Select variant="outlined">
-                        <Option>Nit Hamirpur</Option>
+                <div className="w-full">
+                    <Select
+                        variant="outlined"
+                        color="black"
+                        label="Select Institute"
+                        className=""
+                        onChange={(event) => {
+                          console.log("Selected value:", event);
+                            if (event && event.target && event.target.value) {
+                                const selectedValue = event.target.value;
+                                console.log("Selected value:", selectedValue);
+                                setCheckNit(selectedValue === "Nit Hamirpur");
+                            } else {
+                                console.error("Invalid event or value");
+                            }
+                        }}
+                    >
+                        <Option>Nit bahbsb</Option>
                         <Option>Nit Hamirpur</Option>
                         <Option>Nit Hamirpur</Option>
                     </Select>
                 </div>
+                {checkNit && (
+                    <div className="text-slate-500 w-full">
+                        <label>Name of Institution</label>
+                        <Input
+                            type="text"
+                            className="  !border !border-gray-300 rounded bg-gray-200 text-gray-900 shadow-lg shadow-gray-900/5 ring-4 ring-transparent placeholder:text-gray-500 focus:!border-gray-900 focus:!border-t-gray-900 focus:ring-gray-900/10"
+                            labelProps={{
+                                className: "hidden",
+                            }}
+                            containerProps={{ className: "min-w-[100px]" }}
+                        />
+                    </div>
+                )}
 
                 <Button
-                    className="mt-6 bg-blue-950 text-white rounded-lg"
+                    className="mt-6 bg-blue-950 text-black rounded-lg"
                     fullWidth
                     color="white"
                     type="submit"
