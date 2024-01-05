@@ -1,7 +1,5 @@
-import React from "react"; 
-function App(){
-    return(
-        <h1 className="bg-black text-white">this is app</h1>
-    )
+import React from "react";
+function App() {
+    return 
 }
-export default App
+export default App;

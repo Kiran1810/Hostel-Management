@@ -21,10 +21,8 @@ function Id() {
         const selectedValue = event.target.value;
         setCheckNit(selectedValue === "Nit Hamirpur");
     };
-  
-    useEffect(() => {
-       
 
+    useEffect(() => {
         const authToken = Cookies.get("myToken");
 
         console.log("My token ", authToken);
@@ -32,20 +30,20 @@ function Id() {
         const headers = {
             Authorization: `Bearer ${authToken}`,
         };
-        axios
-            .patch(
-                `https://e-cell-backend2k24.onrender.com/esummit/update/user/${user.id}/`,
-                {   ...detail,
-                    is_NIT: false,
-                },
-                { headers }
-            )
-            .then((response) => {
-                console.log("From id", response);
-            })
-            .catch((error) => {
-                console.error("Error approving :", error);
-            });
+        if (user.id) {
+            axios
+                .patch(
+                    `https://e-cell-backend2k24.onrender.com/esummit/update/user/${user.id}/`,
+                    { ...detail, is_NIT: false },
+                    { headers }
+                )
+                .then((response) => {
+                    console.log("From id", response);
+                })
+                .catch((error) => {
+                    console.error("Error approving :", error);
+                });
+        }
     }, [detail.image]);
     function handleImageUpload() {
         fileInputRef.current.click();
@@ -89,7 +87,7 @@ function Id() {
     };
 
     return (
-        <form >
+        <form>
             <div className="flex flex-col h-screen justify-center items-center px-4 space-y-8">
                 <div className="relative items-center p-2">
                     <img
@@ -97,7 +95,7 @@ function Id() {
                         alt="img"
                         className="w-52 h-52 rounded-full"
                     />
-                      {console.log(detail.image)}
+                    {console.log(detail.image)}
                     <svg
                         width="61"
                         height="61"
@@ -146,7 +144,7 @@ function Id() {
                         }}
                         containerProps={{ className: "min-w-[100px]" }}
                     />
-                     <input
+                    <input
                         type="file"
                         ref={fileInputRef}
                         style={{ display: "none" }}
@@ -161,7 +159,7 @@ function Id() {
                         label="Select Institute"
                         className=""
                         onChange={(event) => {
-                          console.log("Selected value:", event);
+                            console.log("Selected value:", event);
                             if (event && event.target && event.target.value) {
                                 const selectedValue = event.target.value;
                                 console.log("Selected value:", selectedValue);
@@ -172,7 +170,6 @@ function Id() {
                         }}
                     >
                         <Option>NIT HAMIRPUR</Option>
-                        
                     </Select>
                 </div>
                 {checkNit && (
@@ -194,7 +191,6 @@ function Id() {
                     fullWidth
                     color="white"
                     type="submit"
-                   
                 >
                     Sign Up
                 </Button>
