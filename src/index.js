@@ -29,7 +29,8 @@ root.render(
                     <Routes>
                         <Route index element={<HomePage/>} />
                         <Route path="/signup" element={<SignupPg />} />
-                        <Route path="/login" element={<TogglePage />} />
+                        <Route path="/app" element={<TogglePage />} />
+                        <Route path="/login" element={<LogInPg />} />
                     </Routes>
                 </Router>
             </GoogleOAuthProvider>
