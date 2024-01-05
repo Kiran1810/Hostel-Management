@@ -29,7 +29,7 @@ function Signup(){
             `https://e-cell-backend2k24.onrender.com/esummit/register/`,userData
           )
           console.log(response)
-          Cookies.set('mtToken',response.data.token.access,
+          Cookies.set('myToken',response.data.token.access,
           {expires:30})
           dispatch(login(response.data))
           navigate('/login')
@@ -69,7 +69,7 @@ function Signup(){
         });
         dispatch(login(response.data.data));
 
-        navigate("/home");
+        navigate("/app");
     } catch (error) {
         console.error("Server authentication error:", error);
         // toast("Google login failed. Please try again.");

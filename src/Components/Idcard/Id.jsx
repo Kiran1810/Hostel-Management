@@ -11,7 +11,7 @@ function Id() {
     const fileInputRef = useRef(null);
     const [selectedImage, setSelectedImage] = useState(null);
     const [detail, setDetail] = useState({
-        number: "",
+        number: "678678678",
         is_NT: "true",
         image: "https://docs.material-tailwind.com/img/face-2.jpg",
         college_name: "nit-h",
@@ -21,8 +21,13 @@ function Id() {
         const selectedValue = event.target.value;
         setCheckNit(selectedValue === "Nit Hamirpur");
     };
-    const handleSignUp = () => {
+  
+    useEffect(() => {
+       
+
         const authToken = Cookies.get("myToken");
+
+        console.log("My token ", authToken);
 
         const headers = {
             Authorization: `Bearer ${authToken}`,
@@ -30,7 +35,7 @@ function Id() {
         axios
             .patch(
                 `https://e-cell-backend2k24.onrender.com/esummit/update/user/${user.id}/`,
-                {
+                {   ...detail,
                     is_NIT: false,
                 },
                 { headers }
@@ -41,40 +46,7 @@ function Id() {
             .catch((error) => {
                 console.error("Error approving :", error);
             });
-    };
-    useEffect(() => {
-        const authToken2 =
-            "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzA3MDUzNTE2LCJpYXQiOjE3MDQ0NjE1MTYsImp0aSI6IjUxZWNiYzgxMjYzYzQzNzY5ODgzNzg1MDhkMDcyZWM1IiwidXNlcl9pZCI6MjZ9.qVsV3V1RZ7-jM-3c1XraxlDQWTMbGQVJzjkAjM3PGnA";
-
-        const authToken = Cookies.get("myToken");
-
-        // if (authToken2 === authToken){
-        //   console.log("same hai bhai ")
-        // }
-        // else{
-        //   console.log("nhi hai same  bhai ")
-
-        // }
-        console.log("My token ", authToken);
-
-        const headers = {
-            Authorization: `Bearer ${authToken}`,
-        };
-        axios
-            .patch(
-                `https://e-cell-backend2k24.onrender.com/esummit/update/user/26/`,
-                {
-                    is_NIT: true,
-                },
-                { headers }
-            )
-            .then((response) => {
-                console.log("From id", response);
-            })
-            .catch((error) => {
-                console.error("Error approving :", error);
-            });
-    }, []);
+    }, [detail.image]);
     function handleImageUpload() {
         fileInputRef.current.click();
     }
@@ -117,7 +89,7 @@ function Id() {
     };
 
     return (
-        <form onSubmit={handleSignUp}>
+        <form >
             <div className="flex flex-col h-screen justify-center items-center px-4 space-y-8">
                 <div className="relative items-center p-2">
                     <img
@@ -125,7 +97,7 @@ function Id() {
                         alt="img"
                         className="w-52 h-52 rounded-full"
                     />
-
+                      {console.log(detail.image)}
                     <svg
                         width="61"
                         height="61"
@@ -174,6 +146,12 @@ function Id() {
                         }}
                         containerProps={{ className: "min-w-[100px]" }}
                     />
+                     <input
+                        type="file"
+                        ref={fileInputRef}
+                        style={{ display: "none" }}
+                        onChange={handleFileChange}
+                    />
                 </div>
 
                 <div className="w-full">
@@ -193,9 +171,8 @@ function Id() {
                             }
                         }}
                     >
-                        <Option>Nit bahbsb</Option>
-                        <Option>Nit Hamirpur</Option>
-                        <Option>Nit Hamirpur</Option>
+                        <Option>NIT HAMIRPUR</Option>
+                        
                     </Select>
                 </div>
                 {checkNit && (
@@ -217,7 +194,7 @@ function Id() {
                     fullWidth
                     color="white"
                     type="submit"
-                    onClick={handleSignUp}
+                   
                 >
                     Sign Up
                 </Button>

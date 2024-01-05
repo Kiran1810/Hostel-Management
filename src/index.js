@@ -2,7 +2,6 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
-// import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import reportWebVitals from "./reportWebVitals";
 import { Provider } from "react-redux";
@@ -11,8 +10,8 @@ import SignupPg from "./Pages/SignUpPg";
 import HomePage from "./Pages/HomePg";
 
 import LogInPg from "./Pages/LogInPg";
-import EventCard from "./Components/Cards/EventCard";
-import IdCard from "./Pages/IdPage";
+import IdCard from "./Pages/IdPage"
+
 import TogglePage from "./Pages/TogglePage";
 import { GoogleOAuthProvider } from "@react-oauth/google";
 
@@ -30,6 +29,7 @@ root.render(
                         <Route index element={<HomePage/>} />
                         <Route path="/signup" element={<SignupPg />} />
                         <Route path="/app" element={<TogglePage />} />
+                        <Route path="/downLoad" element={<IdCard/>} />
                         <Route path="/login" element={<LogInPg />} />
                     </Routes>
                 </Router>
