@@ -39,7 +39,7 @@ function Login() {
             <form onSubmit={handleFormSubmit}>
                 <div className="flex flex-row space-x-6">
                     <div className="text-slate-500">
-                        <label>Email</label>
+                        <label className="label">Email</label>
                         <Input
                             type="email"
                             className="text"
@@ -57,7 +57,7 @@ function Login() {
                     </div>
                 </div>
                 <div className="text-slate-500">
-                    <label>Password</label>
+                    <label className="label">Password</label>
                     <Input
                         type="password"
                         className="text"
@@ -74,11 +74,11 @@ function Login() {
                     />
                 </div>
                 <div className="flex items-center">
-                    <span className="ml-2">Forget your Password?</span>
+                    <span className="ml-2 label">Forget your Password?</span>
                 </div>
 
                 <Button
-                    className=" mt-6 bg-blue-950 text-white rounded-lg"
+                    className=" mt-6 bg-blue-950 text-white rounded-lg signUp"
                     fullWidth
                     color="white"
                     type="submit"

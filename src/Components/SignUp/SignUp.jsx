@@ -82,15 +82,15 @@ function Signup(){
                 <h1>Sign Up</h1>
             </div>
             <form onSubmit={handleFormSubmit}>
-            <div className="flex flex-row space-x-6">
-              <div className="text-slate-500">
+            <div className="flex flex-row space-x-8">
+              <div className="label">
                 <label>Name</label>
                 <Input
                     type="Name"
                     
-                    className="!border !border-gray-300 rounded  text-gray-900 shadow-lg shadow-gray-900/5 ring-4 ring-transparent placeholder:text-gray-500  bg-gray-200 focus:!border-gray-900 focus:!border-t-gray-900 focus:ring-gray-900/10"
+                    className="text !border !border-gray-300 rounded  text-gray-900 shadow-lg shadow-gray-900/5 ring-4 ring-transparent placeholder:text-gray-500  bg-gray-200 focus:!border-gray-900 focus:!border-t-gray-900 focus:ring-gray-900/10"
                     labelProps={{
-                    className: "hidden",
+                    className: "hidden text",
                     }}
                     containerProps={{ className: "min-w-[100px]" }}
                     onChange={(e)=>setUserData({
@@ -101,14 +101,14 @@ function Signup(){
                 />
                  
               </div>
-              <div className="text-slate-500">
+              <div className="label">
               <label >Email</label>
               <Input
                     type="email"
                     
-                    className="!border !border-gray-300 rounded bg-gray-200 text-gray-900 shadow-lg shadow-gray-900/5 ring-4 ring-transparent placeholder:text-gray-500 focus:!border-gray-900 focus:!border-t-gray-900 focus:ring-gray-900/10"
+                    className="text !border !border-gray-300 rounded bg-gray-200 text-gray-900 shadow-lg shadow-gray-900/5 ring-4 ring-transparent placeholder:text-gray-500 focus:!border-gray-900 focus:!border-t-gray-900 focus:ring-gray-900/10"
                     labelProps={{
-                    className: "hidden",
+                    className: "hidden text",
                     }}
                     containerProps={{ className: "min-w-[100px]" }}
                     onChange={(e)=>setUserData({
@@ -118,14 +118,14 @@ function Signup(){
                 />
               </div>
             </div>
-            <div className="text-slate-500">
+            <div className="label">
             <label>Password</label>
             <Input
                     type="password"
                     
-                    className="!border !border-gray-300 rounded bg-gray-200 text-gray-900 shadow-lg shadow-gray-900/5 ring-4 ring-transparent placeholder:text-gray-500 focus:!border-gray-900 focus:!border-t-gray-900 focus:ring-gray-900/10"
+                    className=" text !border !border-gray-300 rounded bg-gray-200 text-gray-900 shadow-lg shadow-gray-900/5 ring-4 ring-transparent placeholder:text-gray-500 focus:!border-gray-900 focus:!border-t-gray-900 focus:ring-gray-900/10"
                     labelProps={{
-                    className: "hidden",
+                    className: "hidden text",
                     }}
                     containerProps={{ className: "min-w-[100px]" }}
                     onChange={(e)=>setUserData({
@@ -134,14 +134,14 @@ function Signup(){
                     })}
                 />
             </div> 
-            <div className="text-slate-500">
+            <div className="label">
             <label>Confirm Password</label>
             <Input
                     type="password"
                     
-                    className="!border !border-gray-300 rounded bg-gray-200 text-gray-900 shadow-lg shadow-gray-900/5 ring-4 ring-transparent placeholder:text-gray-500 focus:!border-gray-900 focus:!border-t-gray-900 focus:ring-gray-900/10"
+                    className=" text !border !border-gray-300 rounded bg-gray-200 text-gray-900 shadow-lg shadow-gray-900/5 ring-4 ring-transparent placeholder:text-gray-500 focus:!border-gray-900 focus:!border-t-gray-900 focus:ring-gray-900/10"
                     labelProps={{
-                    className: "hidden",
+                    className: "hidden ",
                     }}
                     containerProps={{ className: "min-w-[100px]" }}
                     onChange={(e)=>setUserData({
@@ -150,14 +150,14 @@ function Signup(){
                     })}
                 />
             </div> 
-            <div className="text-slate-500">
+            <div className="label">
             <label>Contact No</label>
             <Input
-                    type="number"
+                    type="text"
                     
-                    className="!border !border-gray-300 rounded bg-gray-200 text-gray-900 shadow-lg shadow-gray-900/5 ring-4 ring-transparent placeholder:text-gray-500 focus:!border-gray-900 focus:!border-t-gray-900 focus:ring-gray-900/10"
+                    className=" text !border !border-gray-300 rounded bg-gray-200 text-gray-900 shadow-lg shadow-gray-900/5 ring-4 ring-transparent placeholder:text-gray-500 focus:!border-gray-900 focus:!border-t-gray-900 focus:ring-gray-900/10"
                     labelProps={{
-                    className: "hidden",
+                    className: "hidden text",
                     }}
                     containerProps={{ className: "min-w-[100px]" }}
                     onChange={(e)=>setUserData({
@@ -173,7 +173,7 @@ function Signup(){
 
 
             <Button
-                        className=" mt-6 bg-blue-950 text-white rounded-lg"
+                        className=" mt-6 bg-blue-950 text-white rounded-lg signUp"
                         fullWidth
                         color="white"
                         type="submit"

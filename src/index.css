@@ -133,8 +133,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 .text{
-  width: 493px;
-height: 75px;
+
 flex-shrink: 0; 
 border-radius: 16px;
 border: 2px solid rgba(0, 32, 82, 0.18);
@@ -194,6 +193,15 @@ font-weight: 400;
 line-height: normal;
 letter-spacing: 1.127px; 
 }
+.signUp{
+  border-radius: 16px;
+border: 2px solid rgba(0, 32, 82, 0.18);
+background: rgba(0, 32, 82, 0.93); 
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 10px; 
+}
 .dropDown{
   width: 600px;
 height: 40px;
@@ -201,6 +209,14 @@ flex-shrink: 0;
 border-radius: 16px;
 border: 2px solid rgba(0, 32, 82, 0.18);
 background: rgba(0, 32, 82, 0.08);
+}
+.label{
+  color: rgba(0, 32, 82, 0.72);
+font-family: K2D;
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+line-height: normal; 
 }
 
 code {
