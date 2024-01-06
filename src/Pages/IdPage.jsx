@@ -5,6 +5,8 @@ import Bg from "../Assets/bg.svg";
 import axios from "axios";
 import Cookies from "js-cookie";
 import { useSelector } from "react-redux";
+import badge from "../Assets/badge.png"
+import badge2 from "../Assets/badge2.png"
 
 function IdCard() {
   const idCardRef = useRef(null);
@@ -70,7 +72,23 @@ function IdCard() {
         }}
         className="bg-cover bg-center InId flex flex-col items-center justify-center"
       >
+      <div className="flex flex-row justify-between space-x-56">
+      <img
+          src={badge}
+          alt="img"
+          className="w-9 h-9"
+          
+          />
+           <img
+          src={badge2}
+          alt="img"
+          className="w-9 h-9"
+          
+          />
+      </div>
+
         <div>
+         
           <img
           
             src={userDetail.image}
