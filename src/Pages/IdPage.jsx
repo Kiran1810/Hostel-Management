@@ -7,17 +7,25 @@ import Cookies from "js-cookie";
 import { useSelector } from "react-redux";
 import badge from "../Assets/badge.png"
 import badge2 from "../Assets/badge2.png"
+import image from "../Assets/SignUppageImage.png"
+
 
 function IdCard() {
   const idCardRef = useRef(null);
   const [userDetail,setUserDetail]=useState({
     name:"",
-    image:"https://docs.material-tailwind.com/img/face-2.jpg",
+    image:"https://docs.material-tailwind.com/img/face-2.jpg",  
     college_name:"",
     number:"",
    
 
   })
+  const flagStyle = {
+    backgroundImage: `url(${image})`,
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    height: "100%",
+  };
   const user=useSelector((state)=>state.auth.userData)
 
   const downloadAsPDF = () => {
@@ -57,14 +65,20 @@ function IdCard() {
   },[])
 
   return (
+<>
+
+
+
     <div
     
-      
+
       style={{
         backgroundImage: `url(${IdBg})`,
       }}
       className="h-screen Id flex flex-col items-center justify-center"
     >
+
+
       <div
       ref={idCardRef}
         style={{
@@ -96,8 +110,8 @@ function IdCard() {
             className="rounded-full w-28 h-28"
           />
         </div>
-        <div className="cardName">{userDetail.name}</div>
-        <div className="small flex flex-col items-center h-screen">
+        <div className="cardName ">{userDetail.name}</div>
+        <div className="small flex flex-col items-center h-screen mt-4">
           <div className="volunteer">VOLUNTEER</div>
           <div >Email: {userDetail.email}</div>
           <div>Colledge: {userDetail.college_name}</div>
@@ -111,6 +125,10 @@ function IdCard() {
         Download
       </button>
     </div>
+
+   
+    
+    </>
   );
 }
 

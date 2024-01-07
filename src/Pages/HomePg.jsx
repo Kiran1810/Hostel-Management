@@ -37,7 +37,7 @@ function HomePage() {
       <div className=" font-K2D text-left text-gray-300">
         <Typography variant="h4">E-Cell NIT HAMIRPUR's</Typography>
       </div>
-      <div className="font-k2d text-center text-color text-gray-300 text-shadow  sm:text-4xl md:text-5xl lg:text-8xl ">
+      <div className="font-k2d text-center text-color text-gray-300 text-shadow text-9xl w-9/12  ">
         ESUMMIT'24
       </div>
       </div>

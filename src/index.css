@@ -39,6 +39,14 @@ line-height: 133.551%;
 background: radial-gradient(148.29% 147.31% at 0% 0%, #D3D8E0 0%, rgba(0, 0, 0, 0.04) 0.62%, rgba(54, 54, 54, 0.25) 42.19%, rgba(0, 32, 82, 0.54) 100%);
 box-shadow: 0px 3.949px 4.937px 0px rgba(42, 42, 42, 0.25);
 }
+.font{
+  display: flex;
+width: 1424.118px;
+height: 158.18px;
+justify-content: center;
+align-items: center;
+flex-shrink: 0; 
+}
 
 .box{
   width: 311px;

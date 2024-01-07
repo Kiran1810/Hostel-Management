@@ -54,22 +54,23 @@ function Signup(){
         const userDetail = {
             name: decodedToken.name,
             email: decodedToken.email,
-            picture: decodedToken.picture,
+            image: decodedToken.picture,
         };
 
         const response = await axios.post(
-            "https://2f98-2405-201-7005-9045-80a0-5653-6e6a-480b.ngrok-free.app/auth/google/",
+            "https://e-cell-backend2k24.onrender.com/esummit/googleauth/",
             userDetail
         );
-        console.log(response.data.data.token.access);
-        dispatch(login(response.data.data));
+        console.log("the response from the google auth",response);
+        // dispatch(login(response));
 
-        Cookies.set("myToken", response.data.data.token.access, {
+        Cookies.set("myToken", response.data.token.access, {
             expires: 30,
         });
-        dispatch(login(response.data.data));
-
+        dispatch(login(response.data));
         navigate("/app");
+
+
     } catch (error) {
         console.error("Server authentication error:", error);
         // toast("Google login failed. Please try again.");
