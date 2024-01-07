@@ -3,16 +3,32 @@ import  {useState, useEffect } from "react"
 import Images from "../Components/Images/Images";
 import SponsorImage from "../Assets/SponsorPg.png"
 import axios from "axios";
+import Investor from "../Components/Images/Investor";
 
 
 
 function Sponsors(){
     const [sponser,setSponser]=useState([])
+    const [investor,setInvestor]=useState([])
     useEffect(()=>{
      axios.get(`https://e-cell-backend2k24.onrender.com/esummit/sponsor/`)
      .then((response)=>(setSponser(response.data),
      console.log("response",response)))
     },[])
+    useEffect(()=>{
+        try{
+            axios.get(`https://e-cell-backend2k24.onrender.com/esummit/investor/`)
+            .then((response)=>setInvestor(response.data))
+    
+        }
+        catch(error){ 
+            console.log(error)
+    
+        }
+    
+      },[])
+
+
     return(
         <div className="flex flex-col pb-24  background ">
             <div className="flex flex-row-reverse">
@@ -34,11 +50,9 @@ function Sponsors(){
                     Our Invester
                 </div>
                 <div className=" items-start gap-x-14 grid grid-cols-5">
-                    <Images/>
-                    <Images/>
-                    <Images/>
-                    <Images/>
-                    <Images/>
+                {investor && investor.map((investor,index)=>( <Investor key={index} {...investor}/>))}
+
+
                     
                 </div>
             </div>

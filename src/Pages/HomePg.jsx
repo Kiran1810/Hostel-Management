@@ -35,7 +35,7 @@ function HomePage() {
       />
       <div>
       <div className=" font-K2D text-left text-gray-300">
-        <Typography variant="h4" size-4xl>E-Cell NIT HAMIRPUR's</Typography>
+        <Typography variant="h4">E-Cell NIT HAMIRPUR's</Typography>
       </div>
       <div className="font-k2d text-center text-color text-gray-300 text-shadow  sm:text-4xl md:text-5xl lg:text-8xl ">
         ESUMMIT'24
@@ -51,7 +51,7 @@ function HomePage() {
       />
 
       <div className="text-center text-gray-300 mt-4 font-Rocker">
-        <Typography variant="h4">24-26 January</Typography>
+      <h1>24-26 January</h1>
       </div>
       <img
         src={jupiterImage}
