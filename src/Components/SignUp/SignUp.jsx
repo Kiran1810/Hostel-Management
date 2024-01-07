@@ -32,7 +32,7 @@ function Signup(){
           Cookies.set('myToken',response.data.token.access,
           {expires:30})
           dispatch(login(response.data))
-          navigate('/login')
+          navigate('/app')
 
           
 
