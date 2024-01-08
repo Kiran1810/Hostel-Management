@@ -23,6 +23,11 @@ function Navbar() {
       active: true
     }, 
     {
+      name: 'My-Profile',
+      slug: "app",
+      active: authStatus
+    }, 
+    {
       name: "Login",
       slug: "/Login",
       active: !authStatus,
