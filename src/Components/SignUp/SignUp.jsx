@@ -9,6 +9,9 @@ import { useDispatch } from "react-redux";
 import GoogleLoginButton from "../GoogleLogin/GoogleLogin";
 import { GoogleLogin } from "@react-oauth/google";
 import { jwtDecode } from "jwt-decode";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 
 
 
@@ -38,6 +41,7 @@ function Signup(){
 
     }catch(error){
            console.log(error)
+           toast.error("some thing went wrong ,try again")
     }
   }
  
@@ -73,7 +77,7 @@ function Signup(){
 
     } catch (error) {
         console.error("Server authentication error:", error);
-        // toast("Google login failed. Please try again.");
+        toast("Google login failed. Please try again.");
     }
 };
 
@@ -182,6 +186,18 @@ function Signup(){
                     >
                         Sign Up
                     </Button>
+                    <ToastContainer
+                        position="bottom-right"
+                        autoClose={5000}
+                        hideProgressBar
+                        newestOnTop={false}
+                        closeOnClick
+                        rtl={false}
+                        pauseOnFocusLoss
+                        draggable
+                        pauseOnHover
+                        theme="dark"
+                    />
 
                     <GoogleLoginButton />
                     <GoogleLogin

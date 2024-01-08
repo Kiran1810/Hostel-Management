@@ -6,6 +6,10 @@ import Cookies from "js-cookie";
 import { Select, Option } from "@material-tailwind/react";
 import { useNavigate } from "react-router-dom";
 import Spinner from "../../Assets/spinner.gif";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
+
 
 function Id() {
   const user = useSelector((state) => state.auth.userData);
@@ -54,6 +58,8 @@ function Id() {
           })
           .catch((error) => {
             console.error("Error approving:", error);
+            toast.error("valid number is required"); // Display the error message in the toast
+            
           })
           .finally(() => {
             setUploading(false);
@@ -221,6 +227,18 @@ function Id() {
         >
           Sign Up
         </Button>
+        <ToastContainer
+                        position="bottom-right"
+                        autoClose={5000}
+                        hideProgressBar
+                        newestOnTop={false}
+                        closeOnClick
+                        rtl={false}
+                        pauseOnFocusLoss
+                        draggable
+                        pauseOnHover
+                        theme="dark"
+                    />
       </div>
     </form>
   );

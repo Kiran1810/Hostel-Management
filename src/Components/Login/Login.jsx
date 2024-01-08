@@ -5,6 +5,8 @@ import Cookies from "js-cookie";
 import { useNavigate } from "react-router-dom";
 import { login } from "../../React-Redux/Auth-Slice";
 import { useDispatch } from "react-redux";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function Login() {
     const [userData, setUserData] = useState({
@@ -27,6 +29,7 @@ function Login() {
             navigate("/");
         } catch (error) {
             console.log(error);
+            toast.error("Something went wrong , try again")
         }
     };
 
@@ -86,6 +89,18 @@ function Login() {
                 >
                     Log In
                 </Button>
+                <ToastContainer
+                        position="bottom-right"
+                        autoClose={5000}
+                        hideProgressBar
+                        newestOnTop={false}
+                        closeOnClick
+                        rtl={false}
+                        pauseOnFocusLoss
+                        draggable
+                        pauseOnHover
+                        theme="dark"
+                    />
             </form>
         </div>
     );

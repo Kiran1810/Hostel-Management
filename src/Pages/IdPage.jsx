@@ -8,10 +8,12 @@ import { useSelector } from "react-redux";
 import badge from "../Assets/badge.png"
 import badge2 from "../Assets/badge2.png"
 import image from "../Assets/SignUppageImage.png"
+import { useNavigate } from "react-router-dom";
 
 
 function IdCard() {
   const idCardRef = useRef(null);
+  const navigate =useNavigate()
   const [userDetail,setUserDetail]=useState({
     name:"",
     image:"https://docs.material-tailwind.com/img/face-2.jpg",  
@@ -39,6 +41,7 @@ function IdCard() {
       html2canvas: { useCORS: true, scale: 2 }
     }
     html2pdf().from(input).set(opt).save()
+    navigate("/")
   };
   
   useEffect(()=>{
