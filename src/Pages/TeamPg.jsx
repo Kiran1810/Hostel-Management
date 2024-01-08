@@ -18,12 +18,12 @@ function TeamPg(){
                 <div className="text-center font-bold tracking-widest text-6xl sponsors">
                     MEET OUR TEAM
                 </div>
-                <div className=" items-start gap-x-14 gap-y-14 grid grid-cols-3">
+                <div className=" items-start gap-x-14 gap-y-14 grid sm:grid-col-2 lg:grid-cols-3">
                     <Manager/>
                     <Manager/>
                     <Manager/>
                </div>
-               <div className=" items-start gap-x-14  gap-y-14 grid grid-cols-4">
+               <div className=" items-start gap-x-14  gap-y-14 grid sm:grid-cols-2 lg:grid-cols-4">
                     <ThirdYear/>
                     <ThirdYear/>
                     <ThirdYear/>
@@ -34,7 +34,7 @@ function TeamPg(){
 
                     
                </div>
-               <div className=" items-start gap-x-14 gap-y-14 grid grid-cols-5">
+               <div className=" items-start gap-x-14 gap-y-14 grid sm:grid-cols-2 lg:grid-cols-5">
                     <SecondYear/>
                     <SecondYear/>
                     <SecondYear/>

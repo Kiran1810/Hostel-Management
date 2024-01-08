@@ -2,3 +2,8 @@
 .heading{
     font-family: 'K2D', sans-serif;
   }
+  @media (max-width: 600px) {
+    body {
+      overflow-x: hidden;
+    }
+  }

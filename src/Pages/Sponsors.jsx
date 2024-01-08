@@ -42,14 +42,14 @@ function Sponsors(){
                 <div className="text-center font-bold tracking-widest text-6xl sponsors">
                     Our Sponsors
                 </div>
-                <div className=" items-start gap-x-14 grid grid-cols-5">
+                <div className=" items-start gap-x-14 grid sm:grid-cols-2 lg:grid-cols-5">
                     {sponser && sponser.map((sponser,index)=>( <Images key={index} {...sponser}/>))}
                    
                 </div>
                 <div className="text-center font-bold tracking-widest text-6xl sponsors">
                     Our Invester
                 </div>
-                <div className=" items-start gap-x-14 grid grid-cols-5">
+                <div className=" items-start gap-x-14  grid sm:grid-cols-2 lg:grid-cols-5">
                 {investor && investor.map((investor,index)=>( <Investor key={index} {...investor}/>))}
 
 

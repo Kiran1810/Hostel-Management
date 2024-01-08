@@ -12,6 +12,7 @@ import Sponsors from './Sponsors';
 import TeamPg from './TeamPg';
 import SpeakersPage from './SpeakersPg';
 import Footer from '../Components/Footer/Footer';
+import "../index.css"
 
 import IdPage from './TogglePage';
 

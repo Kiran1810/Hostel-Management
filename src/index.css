@@ -7,6 +7,12 @@
 @tailwind components;
 @tailwind utilities;
 
+
+@media (max-width: 600px) {
+  body {
+    overflow-x: hidden;
+  }
+}
 .text-color{
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.50) 0%, rgba(255, 255, 255, 0.00) 100%);
 background-clip: text;

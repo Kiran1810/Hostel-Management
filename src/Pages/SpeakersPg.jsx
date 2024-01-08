@@ -43,7 +43,7 @@ function SpeakersPage() {
           />
         </div>
       </div>
-      <div className="grid grid-cols-4 ml-16 mr-20">
+      <div className="grid  sm:grid-cols-1 lg:grid-cols-4 ml-16 mr-20">
 
        {speaker && speaker.map((speaker,index) =>(<SpeakerCard onClick={handleSpeakerClick} key={index} {...speaker}/>))
       }
