@@ -14,7 +14,7 @@ import IdCard from "./Pages/IdPage"
 
 import TogglePage from "./Pages/TogglePage";
 import { GoogleOAuthProvider } from "@react-oauth/google";
-
+import TeamPg from "./Pages/TeamPg";
 
 const ci =
     "896613241937-ip9d212i2f1tv1cosd9jmb8pf2rjre76.apps.googleusercontent.com";
@@ -31,6 +31,8 @@ root.render(
                         <Route path="/app" element={<TogglePage />} />
                         <Route path="/downLoad" element={<IdCard/>} />
                         <Route path="/login" element={<LogInPg />} />
+                        <Route path="/team" element={<TeamPg />} />
+
                     </Routes>
                 </Router>
             </GoogleOAuthProvider>

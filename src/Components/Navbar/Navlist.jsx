@@ -18,6 +18,11 @@ function Navbar() {
       active: true
     }, 
     {
+      name: 'Our-Team',
+      slug: "Team",
+      active: true
+    }, 
+    {
       name: "Login",
       slug: "/Login",
       active: !authStatus,

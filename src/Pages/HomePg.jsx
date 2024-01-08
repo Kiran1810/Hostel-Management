@@ -70,9 +70,9 @@ function HomePage() {
     <div className="bg-black  ">
     <Sponsors/>
     </div>
-    <div className="bg-black ">
+    {/* <div className="bg-black ">
     <TeamPg/>
-    </div>
+    </div> */}
    
     <div className="bg-black py-14">
     <Footer/>

@@ -8,6 +8,7 @@ import {
   DialogBody,
   DialogFooter,
 } from "@material-tailwind/react";
+import Money from "../../Assets/money2.png"
 
 export function DialogDefault({ isOpen, onClose, name,description,prize}) {
   return (
@@ -29,8 +30,8 @@ export function DialogDefault({ isOpen, onClose, name,description,prize}) {
             <div>team</div>
           </div>
           <div className="flex flex-row items-center">
-            <img src={Loyalty} alt="loyalty" className="mr-2" />
-            <div>{prize}</div>
+            <img src={Money} alt="loyalty" className="mr-2" />
+            <div>prize</div>
           </div>
         </div>
         <Button variant="gradient" color="green" onClick={onClose}>

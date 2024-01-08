@@ -5,19 +5,21 @@ import axios from "axios";
 import Cookies from "js-cookie";
 import { Select, Option } from "@material-tailwind/react";
 import { useNavigate } from "react-router-dom";
+import Spinner from "../../Assets/spinner.gif";
 
 function Id() {
   const user = useSelector((state) => state.auth.userData);
   const fileInputRef = useRef(null);
   const [selectedImage, setSelectedImage] = useState(null);
   const [showInstituteName, setShowInstituteName] = useState(false);
-  const navigate=useNavigate()
+  const navigate = useNavigate();
   const [detail, setDetail] = useState({
     image: "https://docs.material-tailwind.com/img/face-2.jpg",
     number: "",
-    is_NIT:true,
-    college_name:"nit-h"
+    is_NIT: true,
+    college_name: "nit-h",
   });
+  const [uploading, setUploading] = useState(false);
 
   const handleSelectChange = (selectedValue) => {
     setShowInstituteName(selectedValue !== "Nit Hamirpur");
@@ -26,9 +28,6 @@ function Id() {
       is_NIT: selectedValue === "Nit Hamirpur",
     }));
   };
-  
-
-  console.log("the setShowInstitute".showInstituteName)
 
   const handleSubmit = useCallback(
     (e) => {
@@ -41,37 +40,44 @@ function Id() {
       };
 
       if (user.id) {
+        setUploading(true);
+
         axios
           .patch(
             `https://e-cell-backend2k24.onrender.com/esummit/update/user/${user.id}/`,
-            { ...detail,},
+            { ...detail },
             { headers }
           )
           .then((response) => {
             console.log("From id", response);
-            navigate("/downLoad")
+            navigate("/downLoad");
           })
           .catch((error) => {
             console.error("Error approving:", error);
+          })
+          .finally(() => {
+            setUploading(false);
           });
       }
     },
     [detail, user.id]
   );
 
-  function handleImageUpload() {
+  const handleImageUpload = () => {
     fileInputRef.current.click();
-  }
+  };
 
-  function handleFileChange(event) {
+  const handleFileChange = (event) => {
     const file = event.target.files[0];
     if (file) {
       setSelectedImage(file);
     }
     handleUpload();
-  }
+  };
 
   const handleUpload = async () => {
+
+    
     try {
       if (!selectedImage) {
         console.error("No image selected.");
@@ -82,6 +88,8 @@ function Id() {
       formData.append("file", selectedImage);
       formData.append("upload_preset", "karanUpload");
 
+      setUploading(true)
+     
       const response = await axios.post(
         "https://api.cloudinary.com/v1_1/dha8atrgz/image/upload",
         formData
@@ -89,6 +97,8 @@ function Id() {
 
       const imageUrl = response.data.secure_url;
       setDetail((prevDetail) => ({ ...prevDetail, image: imageUrl }));
+
+      setUploading(false)
     } catch (error) {
       console.error("Error uploading image:", error);
     }
@@ -103,6 +113,13 @@ function Id() {
             alt="img"
             className="w-52 h-52 rounded-full"
           />
+          {uploading && (
+            <img
+              src={Spinner}
+              alt="spinner"
+              className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+            />
+          )}
           <svg
             width="61"
             height="61"
@@ -170,8 +187,8 @@ function Id() {
             label="Select Institute"
             className=""
             value={detail.is_NIT ? "Nit Hamirpur" : "Others"}
-            onChange={(selectedValue) => handleSelectChange(selectedValue)}          >
-
+            onChange={(selectedValue) => handleSelectChange(selectedValue)}
+          >
             <Option value="Nit Hamirpur">NIT HAMIRPUR</Option>
             <Option value="Others">Others</Option>
           </Select>
@@ -193,7 +210,6 @@ function Id() {
                 })
               }
             />
-          
           </div>
         )}
         <Button

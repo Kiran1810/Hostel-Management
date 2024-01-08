@@ -2,10 +2,16 @@ import React from "react";
 import Manager from "../Components/Images/ManagerImage";
 import SecondYear from "../Components/Images/SecondYear";
 import ThirdYear from "../Components/Images/ThirdYear";
-
+import Footer from "../Components/Footer/Footer";
+import Navbar from "../Components/Navbar/Navlist";
 
 function TeamPg(){
     return(
+        <>
+        <div>
+          <Navbar/>
+        </div>
+        <div className="bg-black">
         <div className="flex flex-col pt-16 ml-10 mr-10">
            
             <div className=" flex flex-col gap-y-24">
@@ -46,6 +52,9 @@ function TeamPg(){
           
           </div>
         </div>
+        <Footer/>
+        </div>
+        </>
     )
 }
 
