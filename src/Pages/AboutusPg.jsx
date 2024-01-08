@@ -4,12 +4,12 @@ import personImage from "../Assets/person.png"
 function AboutUsPage(){
 return(
     <div className="flex flex-col bg-black ">
-      <div className="flex flex-row ml-20 mr-20 ">
+      <div className="flex lg:flex-row sm:flex-col-reverse ml-20 mr-20 ">
         <div className="text-white place-items-center ">
-           <div className="what pt-8">
+           <div className=" what pt-8">
             WHAT IS
            </div>
-           <div className="E-summit">
+           <div className="E-summit ">
             E-SUMMIT?
            </div>
            <div className="pt-8">
@@ -27,7 +27,7 @@ return(
             />
          </div>
       </div>
-      <div className="flex flex-row text-white justify-center space-x-52">
+      <div className="flex flex-row  text-white justify-center lg:space-x-52 sm:space-x-24">
         <div>
            <div className="border-b-2 border-blue-500 py-2 text-4xl font-Rocker">
             10+

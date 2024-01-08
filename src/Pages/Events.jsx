@@ -14,17 +14,17 @@ function Event(){
     return(
         <>
         <div className=" flex flex-col bg-black">
-            <div className="flex flex-row justify-start">
+            <div className="flex lg:flex-row  sm:flex-col lg:justify-start">
                 <img
                 src={Group}
                 alt="group Image"
-                className=" object-contain  sm:w-18 sm:h-18 ml-10 p-5  bg-black"
+                className=" object-contain ml-10 p-5  bg-black"
                 />
-                <div className="text-white mt-72 E-summit"> 
+                <div className=" lg:mt-72 sm:mt-8 E-summit sm:pl-24"> 
                     Our Events
                 </div>
             </div>
-            <div className=" grid sm:grid-2 lg:grid-cols-4 ml-10"> 
+            <div className=" grid sm:grid-2 lg:grid-cols-4 ml-10 sm:gap-y-4 sm:pl-20"> 
             {event && event.map((event,index)=>(<EventCard key={index} {...event}/>))}
                 
             </div>

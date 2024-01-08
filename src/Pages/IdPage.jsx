@@ -78,7 +78,7 @@ function IdCard() {
       style={{
         backgroundImage: `url(${IdBg})`,
       }}
-      className="h-screen Id flex flex-col items-center justify-center"
+      className="h-screen Id flex flex-col items-center justify-center "
     >
 
 
@@ -87,7 +87,7 @@ function IdCard() {
         style={{
           backgroundImage: `url(${Bg})`,
         }}
-        className="bg-cover bg-center InId flex flex-col items-center justify-center"
+        className="bg-cover bg-center InId flex flex-col items-center justify-center "
       >
       <div className="flex flex-row justify-between space-x-56">
       <img

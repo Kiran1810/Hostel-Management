@@ -19,6 +19,14 @@ background-clip: text;
 -webkit-background-clip: text;
 -webkit-text-fill-color: transparent;
 }
+.what2{
+  color: #FFF;
+font-family: Playfair Display SC;
+font-size: 13.815px;
+font-style: normal;
+font-weight: 400;
+line-height: normal; 
+}
 
 .E-summit{
   background: linear-gradient(92deg, #B0C8EB 2.33%, #1C70D1 51.91%);
@@ -30,6 +38,17 @@ font-size: 70px;
 font-style: normal;
 font-weight: 700;
 line-height: 133.551%;
+}
+.E-summit2{
+  background: linear-gradient(92deg, #B0C8EB 2.33%, #1C70D1 51.91%);
+background-clip: text;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+font-family: Playfair Display SC;
+font-size: 16.117px;
+font-style: normal;
+font-weight: 700;
+line-height: 133.551%; 
 }
 
 .what{

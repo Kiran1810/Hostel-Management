@@ -17,7 +17,7 @@ import { GoogleOAuthProvider } from "@react-oauth/google";
 import TeamPg from "./Pages/TeamPg";
 
 const ci =
-    "896613241937-ip9d212i2f1tv1cosd9jmb8pf2rjre76.apps.googleusercontent.com";
+    "112085492329-gsbkr5apdokckeejm87v3eqvr3he6bt5.apps.googleusercontent.com";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

@@ -18,12 +18,14 @@ import IdPage from './TogglePage';
 
 function HomePage() {
   return (
+
     <>
+    
     <div>
     <Navbar/>
 </div>
     <div
-      className="flex flex-col items-center  h-screen bg-cover bg-center"
+      className="flex flex-col items-center overflow-hidden h-screen bg-cover bg-center sm:w-full"
       style={{
         backgroundImage: `url(${backgroundImageImage})`,
       }}
@@ -78,7 +80,7 @@ function HomePage() {
     <div className="bg-black py-14">
     <Footer/>
     </div>
-
+    
     </>
     
   );
