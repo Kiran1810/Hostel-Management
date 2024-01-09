@@ -22,11 +22,11 @@ function SpeakersPage() {
   };
 
   return (
-    <div className="bg-black  pb-4">
+    <div className="bg-black pb-0 pt-2 lg:pb-4 lg:pt-64 ">
       
-      <div className="flex lg:flex-row sm:flex-col-reverse ml-24 mr-20">
+      <div className="flex lg:flex-row  lg:ml-24 lg:mr-20">
         <div className="flex flex-col items-center pt-8  ml-10">
-          <div className="text-white E-summit">OUR SPEAKERS</div>
+          <div className=" font-playfair text-blue-300 text-2xl font-bold leading-normal tracking-wider bg-gradient-to-r from-blue-300 via-blue-800 to-blue-800 bg-clip-text text-transparent   lg:text-transparent lg:bg-gradient-to-r lg:from-blue-300 lg:to-blue-800 lg:bg-clip-text lg:font-playfair lg:font-bold lg:text-6xl">OUR SPEAKERS</div>
           <div className="text-white sm:text-center ">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque
             reiciendis, fuga soluta atque itaque suscipit alias repudiandae
@@ -40,11 +40,11 @@ function SpeakersPage() {
           <img
             src={SpeakersImage}
             alt="SpeakersImage"
-            className="object-contain p-4 "
+            className="object-contain  w-16 h-20 lg:w-80 lg:h-80"
           />
         </div>
       </div>
-      <div className="grid  sm:grid-cols-1 lg:grid-cols-4 ml-16 mr-20 sm:pl-20">
+      <div className="grid  sm:grid-cols-1 lg:grid-cols-4  ml-16 mr-20 sm:pl-20">
 
        {speaker && speaker.map((speaker,index) =>(<SpeakerCard onClick={handleSpeakerClick} key={index} {...speaker}/>))
       }

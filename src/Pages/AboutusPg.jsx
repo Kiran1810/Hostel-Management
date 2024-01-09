@@ -4,12 +4,12 @@ import personImage from "../Assets/person.png"
 function AboutUsPage(){
 return(
     <div className="flex flex-col bg-black ">
-      <div className="flex lg:flex-row sm:flex-col-reverse ml-20 mr-20 ">
+      <div className="flex flex-col-reverse lg:flex-row  ml-20 mr-20 ">
         <div className="text-white place-items-center ">
-           <div className=" what pt-8">
-            WHAT IS
+           <div className="what2 sm:what   pt-8">
+            WHAT IS   
            </div>
-           <div className="E-summit ">
+           <div className="font-playfair text-blue-300 text-2xl font-bold leading-normal tracking-wider bg-gradient-to-r from-blue-300 via-blue-800 to-blue-800 bg-clip-text text-transparent   lg:text-transparent lg:bg-gradient-to-r lg:from-blue-300 lg:to-blue-800 lg:bg-clip-text lg:font-playfair lg:font-bold lg:text-6xl">
             E-SUMMIT?
            </div>
            <div className="pt-8">

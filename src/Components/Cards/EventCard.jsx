@@ -69,11 +69,11 @@ function EventCard({name,event_date,description}) {
   return (
     <>
       <div
-        className={`card ${activeCardClass} w-80 h-80 text-white flex flex-col   items-center space-y-3  `}
+        className={`card ${activeCardClass} w-32 h-36 lg:w-80 lg:h-80 text-white flex flex-col   items-center space-y-3  `}
         onClick={handleCardClick}
       >
-        <img src={CardIcon} alt="cardIcon" className="h-14 w-14 mt-5" />
-        <div className="ml-8 mr-8 mt-2 pb-3 space-y-4">
+        <img src={CardIcon} alt="cardIcon" className="h-4 w-4 lg:h-14 lg:w-14 mt-5" />
+        <div className="ml-8 mr-8 mt-2 pb-3 space-y-4 text-xs lg:text-base">
           <div className="font-kelly">{name}</div>
           <div className="font-kelly">Coming In</div>
           <div className="font-Rocker">{event_date}</div>
