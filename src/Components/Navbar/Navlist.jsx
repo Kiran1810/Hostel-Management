@@ -54,23 +54,23 @@ function Navbar() {
     <header className='py-3 shadow bg-black'>
       {/* <Container> */}
         <nav className='flex'>
-          <div className='mr-4'>
+          <div className=' mr-2 lg:mr-4'>
             <Link to='/'>
             <img
         src={LogoImage}
         alt="LogoImage"
-        className="w-14 h-14 ml-8"
+        className="w-11 h-11 ml-3 lg:w-14 lg:h-14 lg:ml-8"
       />
 
               </Link>
           </div>
-          <ul className='flex ml-auto'>
+          <ul className='flex lg:ml-auto ml-1'>
             {navItems.map((item) => 
             item.active ? (
               <li key={item.name}>
                 <button
                 onClick={() => navigate(item.slug)}
-                className='inline-bock px-6 py-2 duration-200 text-white'
+                className='inline-bock lg:px-6 lg:py-2 px-2 py-2 duration-200 text-white'
                 >{item.name}</button>
               </li>
             ) : null

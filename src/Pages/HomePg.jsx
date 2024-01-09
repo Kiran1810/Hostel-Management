@@ -34,13 +34,13 @@ function HomePage() {
       <img
         src={constellationImage}
         alt="Constellation"
-        className="sm:w-45 sm:h-48  md:w-45 md:h-48 lg:w-50 lg:h-50  object-contain ml-auto "
+        className="w-28 h-28 lg:w-64 lg:h-64  object-contain ml-auto "
       />
       <div>
-      <div className=" font-K2D text-left text-gray-300">
-        <Typography variant="h4">E-Cell NIT HAMIRPUR's</Typography>
+      <div className=" font-K2D text-center text-gray-300 flex justify-center lg:text-4xl lg:w-screen w-56 " >
+       E-Cell NIT HAMIRPUR's
       </div>
-      <div className="font-k2d text-center text-color text-gray-300 text-shadow text-9xl w-9/12  ">
+      <div className="font-k2d text-center text-color flex justify-center text-gray-300 text-shadow lg:text-9xl lg:w-screen w-56 text-4xl">
         ESUMMIT'24
       </div>
       </div>
@@ -50,7 +50,7 @@ function HomePage() {
       <img
         src={Hindi}
         alt="Hindi quete"
-        className=" sm:w-25 sm:h-25 object-contain "
+        className="w-32 h-32 lg:w-80 lg:h-80 object-contain "
       />
 
       <div className="text-center text-gray-300 mt-4 font-Rocker">
@@ -59,7 +59,7 @@ function HomePage() {
       <img
         src={jupiterImage}
         alt="jupitor"
-        className="sm:w-45 sm:h-48  md:w-45 md:h-48 lg:w-50 lg:h-50 object-contain mr-auto"
+        className="w-28 h-28 lg:w-64 lg:h-64  object-contain mr-auto"
       />
     </div>
     <AboutUsPage/>
