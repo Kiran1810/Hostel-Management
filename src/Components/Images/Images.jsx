@@ -30,7 +30,7 @@ function Images({ description, image, name,linkdin,insta,facebook }) {
         <img
           src={image}
           alt="avatar"
-          className="p-0.5 rounded-full w-52 h-52 my-auto mx-auto-block"
+          className="p-0.5 rounded-full lg:w-52 lg:h-52 w-16 h-16 my-auto mx-auto-block"
         />
       </div>
       <Dialog
