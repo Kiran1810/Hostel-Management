@@ -30,14 +30,14 @@ function Images({ description, image, name,linkdin,insta,facebook }) {
         <img
           src={image}
           alt="avatar"
-          className="p-0.5 rounded-full lg:w-52 lg:h-52 w-16 h-16 my-auto mx-auto-block"
+          className="p-0.5 rounded-full lg:w-auto lg:h-auto w-16 h-16 my-auto mx-auto-block"
         />
       </div>
       <Dialog
         open={isDialogOpen}
         size="lg"
         handler={() => setDialogOpen(false)}
-        className="sponserCard bg-black"
+        className="sponserCard bg-black  lg:m-4 m-1"
       >
         <DialogHeader></DialogHeader>
         <DialogBody>
@@ -70,20 +70,20 @@ function Images({ description, image, name,linkdin,insta,facebook }) {
                 </div>  
             </div>
 
-            <div className="flex flex-col items-center justify-center">
+            <div className="flex flex-col items-center justify-center ">
               <div className="flex justify-normal z">
                 {
                   <div className="">
                     <img
                       src={image}
                       alt="speakerImage"
-                      className="object-contain rounded-full"
+                      className="object-contain rounded-full lg:w-40 lg:h-40 h-16 w-16 "
                     />
                   </div>
                 }
               </div>
               <div className="text-white pt-8 sponsersName">{name}</div>
-              <div className="text-white pt-8">{description}</div>
+              <div className="text-white pt-8">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus necessitatibus consectetur architecto accusantium quae officiis quos ipsam cumque modi dignissimos, reprehenderit perspiciatis alias aspernatur, quo doloremque, pariatur sunt. Eaque, optio nihil. Voluptatibus quasi itaque explicabo totam, voluptas facere. Quia minus minima maxime magni accusamus hic eos perferendis tenetur rem distinctio.</div>
             </div>
           </div>
         </DialogBody>
