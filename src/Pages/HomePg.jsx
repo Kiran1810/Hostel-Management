@@ -40,7 +40,7 @@ function HomePage() {
       <div className=" font-K2D text-center text-gray-300 flex justify-center lg:text-4xl lg:w-screen w-56 text " >
        E-Cell NIT HAMIRPUR's
       </div>
-      <div className="font-k2d text-center font-black text-color flex justify-center text-gray-300 text-shadow lg:text-9xl lg:w-screen w-56 text-4xl">
+      <div className="font-k2d text-center lg:font-black  text-color flex justify-center text-gray-300 text-shadow lg:text-9xl lg:w-screen w-56 text-4xl">
         ESUMMIT'24
       </div>
       </div>
@@ -50,7 +50,7 @@ function HomePage() {
       <img
         src={Hindi}
         alt="Hindi quete"
-        className="w-32 h-32 lg:w-80 lg:h-80 object-contain "
+        className="w-32 h-32 lg:w-96 lg:h-96 object-contain "
       />
 
       <div className="text-center text-gray-300 mt-4 font-Rocker">

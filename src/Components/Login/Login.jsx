@@ -23,10 +23,11 @@ function Login() {
                 `https://e-cell-backend2k24.onrender.com/esummit/login/`,
                 userData
             );
-            console.log(response);
-            Cookies.set("myToken", response.data.token.access, { expires: 30 });
-            dispatch(login(response));
-            navigate("/");
+            console.log(response)
+            Cookies.set('myToken',response.data.token.access,
+            {expires:30})
+            dispatch(login(response.data))
+            navigate('/')
         } catch (error) {
             console.log(error);
             toast.error("Something went wrong , try again")

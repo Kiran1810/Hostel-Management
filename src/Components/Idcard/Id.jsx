@@ -13,6 +13,7 @@ import "react-toastify/dist/ReactToastify.css";
 
 function Id() {
   const user = useSelector((state) => state.auth.userData);
+  console.log(user.id,"the user in the id card")
   const fileInputRef = useRef(null);
   const [selectedImage, setSelectedImage] = useState(null);
   const [showInstituteName, setShowInstituteName] = useState(false);
@@ -36,16 +37,16 @@ function Id() {
   const handleSubmit = useCallback(
     (e) => {
       e.preventDefault();
-
+    
       const authToken = Cookies.get("myToken");
 
       const headers = {
         Authorization: `Bearer ${authToken}`,
       };
-
-      if (user.id) {
-        setUploading(true);
-
+      console.log("interaction with the code")
+      // if (user.id) {
+      //   setUploading(true);
+ 
         axios
           .patch(
             `https://e-cell-backend2k24.onrender.com/esummit/update/user/${user.id}/`,
@@ -53,6 +54,7 @@ function Id() {
             { headers }
           )
           .then((response) => {
+            console.log("inside the idcard")
             console.log("From id", response);
             navigate("/downLoad");
           })
@@ -65,7 +67,7 @@ function Id() {
             setUploading(false);
           });
       }
-    },
+    ,
     [detail, user.id]
   );
 
