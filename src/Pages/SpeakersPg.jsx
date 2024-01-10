@@ -22,7 +22,7 @@ function SpeakersPage() {
   };
 
   return (
-    <div className="bg-black pb-0 pt-2 lg:pb-4 lg:pt-64 ">
+    <div className="bg-black pb-0 pt-2 lg:pb-4 lg:pt-64 pl-6 ">
       
       <div className="flex flex-col-reverse lg:flex-row  lg:ml-24 lg:mr-20">
         <div className="flex flex-col lg:items-center pt-8  lg:ml-10">
@@ -36,7 +36,7 @@ function SpeakersPage() {
           </div>
         </div>
 
-        <div className="">
+        <div className="flex justify-center">
           <img
             src={SpeakersImage}
             alt="SpeakersImage"

@@ -12,7 +12,7 @@ return(
            <div className="font-playfair text-blue-300 text-2xl font-bold leading-normal tracking-wider bg-gradient-to-r from-blue-300 via-blue-800 to-blue-800 bg-clip-text text-transparent   lg:text-transparent lg:bg-gradient-to-r lg:from-blue-300 lg:to-blue-800 lg:bg-clip-text lg:font-playfair lg:font-bold lg:text-6xl">
             E-SUMMIT?
            </div>
-           <div className="pt-8">
+           <div className="lg:pt-8 pt-4  ">
              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque dicta earum ad minima blanditiis porro a cumque neque
               laboriosam, commodi esse nulla quae magnam exercitationem, at nemo. Cumque, reiciendis.
              Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus quisquam sit officia saepe incidunt
@@ -27,25 +27,25 @@ return(
             />
          </div>
       </div>
-      <div className="flex flex-row  text-white justify-center lg:space-x-52 sm:space-x-24">
+      <div className="flex flex-row  text-white justify-center lg:space-x-52 space-x-6 ">
         <div>
-           <div className="border-b-2 border-blue-500 py-2 text-4xl font-Rocker">
+           <div className="border-b-2 border-blue-500 py-2 lg:text-4xl text-2xl font-Rocker">
             10+
            </div>
-           <div className="py-1">
+           <div className="py-1 ">
            Speakers
            </div>
         </div>
         <div>
-            <div className="border-b-2 border-blue-500 py-2 text-4xl font-Rocker">
+            <div className="border-b-2 border-blue-500 py-2 lg:text-4xl text-2xl font-Rocker">
             10+
             </div>
-            <div className="py-1 text-center">
+            <div className="py-1 text-center ">
             Cities
             </div>
         </div>
         <div>
-            <div className="border-b-2 border-blue-500 py-2 text-4xl font-Rocker ">
+            <div className="border-b-2 border-blue-500 py-2 lg:text-4xl text-2xl font-Rocker ">
             10+
             </div>
             <div className="py-1 text-center">
@@ -53,7 +53,7 @@ return(
             </div>
         </div>
         <div className="">
-            <div className="border-b-2 border-blue-500 py-2 text-4xl font-Rocker">
+            <div className="border-b-2 border-blue-500 py-2 lg:text-4xl text-2xl font-Rocker">
              100+
             </div>
             <div className="py-1 text-center">
