@@ -15,7 +15,7 @@ export function DialogDefault({ isOpen, onClose, name,description,prize}) {
     <Dialog
       open={isOpen}
       handler={onClose}
-      className="flex flex-col lg:h-screen items-center text-white overflow-y-auto space-y-5 over w-44 h-80"
+      className="flex flex-col lg:h-screen items-center text-white overflow-y-auto space-y-5 over w-44 h-auto"
     >
       <img src={CardIcon} alt="cardIcon" className=" h-10 w-10  lg:h-44 lg:w-44  mt-5" />
 
