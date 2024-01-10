@@ -15,28 +15,31 @@ export function DialogDefault({ isOpen, onClose, name,description,prize}) {
     <Dialog
       open={isOpen}
       handler={onClose}
-      className="flex flex-col h-screen items-center text-white overflow-y-auto space-y-5 over"
+      className="flex flex-col lg:h-screen items-center text-white overflow-y-auto space-y-5 over w-44 h-60"
     >
-      <img src={CardIcon} alt="cardIcon" className="h-44 w-44 mt-5" />
+      <img src={CardIcon} alt="cardIcon" className=" h-4 w-4  lg:h-44 lg:w-44  mt-5" />
 
-      <DialogHeader>{name}</DialogHeader>
-      <DialogBody className="ml-11 mr-11 mb-5">
+      <DialogHeader className="lg:text-2xl text-base lg:p-4 p-0">{name}</DialogHeader>
+      <DialogBody className="ml-11 mr-11 lg:mb-5 mb-2 lg:p-4 p-0 lg:text-base text-xs">
         {description}
       </DialogBody>
       <DialogFooter className="flex flex-row justify-between">
         <div className="flex flex-row mr-20">
           <div className="flex flex-row items-center mr-4">
-            <img src={Loyalty} alt="loyalty" className="mr-2" />
+            <img src={Loyalty} alt="loyalty" className="mr-2 lg:14 lg:h-14 w-10 h-10" />
             <div>team</div>
           </div>
           <div className="flex flex-row items-center">
-            <img src={Money} alt="loyalty" className="mr-2" />
+            <img src={Money} alt="loyalty" className="mr-2 lg:11 lg:h-11 w-10 h-10" />
             <div>prize</div>
           </div>
-        </div>
-        <Button variant="gradient" color="green" onClick={onClose}>
+          </div> 
+          <div>
+        <Button variant="gradient" color="green" onClick={onClose} className="lg:px-6 px-2 lg:mt-0 mt-6 ml-52 lg:ml-0 ">
           <span>Confirm</span>
         </Button>
+        </div>
+        
       </DialogFooter>
     </Dialog>
   );
