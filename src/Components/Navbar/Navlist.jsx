@@ -64,7 +64,7 @@ function Navbar() {
 
               </Link>
           </div>
-          <ul className='flex lg:ml-auto ml-1'>
+          <ul className='flex lg:ml-auto ml-auto'>
             {navItems.map((item) => 
             item.active ? (
               <li key={item.name}>
