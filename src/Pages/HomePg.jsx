@@ -5,7 +5,6 @@ import constellationImage from '../Assets/constillation.png';
 import jupiterImage from "../Assets/jupitor.png";
 import Navbar from '../Components/Navbar/Navlist';
 import "../index.css"
-import Hindi from "../Assets/hindi_quote.png";
 import AboutUsPage from './AboutusPg';
 import Events from "./Events"
 import Sponsors from './Sponsors';
@@ -40,21 +39,19 @@ function HomePage() {
       <div className=" font-K2D text-center text-gray-300 flex justify-center lg:text-4xl lg:w-screen w-56 text " >
        E-Cell NIT HAMIRPUR's
       </div>
-      <div className="font-k2d text-center lg:font-black  text-color flex justify-center text-gray-300 text-shadow lg:text-9xl lg:w-screen w-56 text-4xl">
+      <div className="font-k2d tracking-widest text-center lg:font-black font-extrabold text-color flex justify-center text-gray-300 text-shadow lg:text-9xl lg:w-screen  text-4xl">
         ESUMMIT'24
       </div>
       </div>
       <div className="text-center text-gray-300 sm:text-base md:text-lg lg:text-4xl font-kelly mt-3 tracking-widest"  >
         EMERGENCE OF ETERNITY
       </div>
-      <img
-        src={Hindi}
-        alt="Hindi quete"
-        className="w-32 h-32 lg:w-96 lg:h-96 object-contain "
-      />
+      <div className="text-center text-gray-300 sm:text-base md:text-lg lg:text-4xl font-kelly mt-3 tracking-widest"  >
+      निष्ठा | धृति: | सत्यम
+      </div>
 
       <div className="text-center text-gray-300 mt-4 font-Rocker">
-      <h1>24-26 January</h1>
+      <h1>24-26 January </h1>
       </div>
       <img
         src={jupiterImage}

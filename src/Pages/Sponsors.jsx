@@ -39,14 +39,14 @@ function Sponsors(){
                 />
             </div>
             <div className=" flex flex-col gap-y-20 lg:ml-10 ml-4 mr-10" >
-                <div className="font-playfair text-blue-300 text-2xl font-bold leading-normal tracking-wider bg-gradient-to-r from-blue-300 via-blue-800 to-blue-800 bg-clip-text text-transparent   lg:text-transparent lg:bg-gradient-to-r lg:from-blue-300 lg:to-blue-800 lg:bg-clip-text lg:font-playfair lg:font-bold lg:text-6xl">
+                <div className="font-Play flex justify-center text-blue-300 text-2xl font-bold leading-normal tracking-wider bg-gradient-to-r from-blue-300 via-blue-800 to-blue-800 bg-clip-text text-transparent   lg:text-transparent lg:bg-gradient-to-r lg:from-blue-300 lg:to-blue-800 lg:bg-clip-text lg:font-playfair lg:font-bold lg:text-6xl">
                     Our Sponsors
                 </div>
                 <div className=" items-start lg:gap-x-14 gap-x-1 grid grid-cols-3 sm:gap-y-4 lg:grid-cols-5">
                     {sponser && sponser.map((sponser,index)=>( <Images key={index} {...sponser}/>))}
                    
                 </div>
-                <div className="font-playfair text-blue-300 text-2xl font-bold leading-normal tracking-wider bg-gradient-to-r from-blue-300 via-blue-800 to-blue-800 bg-clip-text text-transparent   lg:text-transparent lg:bg-gradient-to-r lg:from-blue-300 lg:to-blue-800 lg:bg-clip-text lg:font-playfair lg:font-bold lg:text-6xl">
+                <div className="font-Play flex justify-center text-blue-300 text-2xl font-bold leading-normal tracking-wider bg-gradient-to-r from-blue-300 via-blue-800 to-blue-800 bg-clip-text text-transparent   lg:text-transparent lg:bg-gradient-to-r lg:from-blue-300 lg:to-blue-800 lg:bg-clip-text lg:font-playfair lg:font-bold lg:text-6xl">
                     Our Invester
                 </div>
                 <div className=" items-start lg:gap-x-14 gap-x-1 grid grid-cols-3 sm:gap-y-4 lg:grid-cols-5">

@@ -54,7 +54,7 @@ function EventCard({name,event_date,description}) {
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveCardIndex((prevIndex) => (prevIndex + 1) % cards.length);
-    }, 400);
+    }, 800);
 
     return () => clearInterval(interval);
   }, []);
