@@ -77,9 +77,9 @@ function HomePage() {
     <TeamPg/>
     </div> */}
    
-    {/* <div className="bg-black py-14">
+    <div className="bg-black py-14">
     <Footer/>
-    </div> */}
+    </div>
     
     </>
     

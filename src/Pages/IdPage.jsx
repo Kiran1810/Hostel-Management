@@ -78,7 +78,7 @@ function IdCard() {
       style={{
         backgroundImage: `url(${IdBg})`,
       }}
-      className="h-screen Id flex flex-col items-center justify-center "
+      className=" bg-no-repeat lg:w-10/12 h-screen  flex flex-col place-items-center justify-center "
     >
 
 
@@ -87,7 +87,7 @@ function IdCard() {
         style={{
           backgroundImage: `url(${Bg})`,
         }}
-        className="bg-cover bg-center InId flex flex-col items-center justify-center "
+        className="bg-cover bg-center InId flex lg:mt-96 flex-col items-center justify-center "
       >
       <div className="flex flex-row justify-between space-x-56">
       <img
@@ -113,7 +113,7 @@ function IdCard() {
             className="rounded-full w-28 h-28"
           />
         </div>
-        <div className="cardName ">{userDetail.name}</div>
+        <div className="cardName flex justify-center">{userDetail.name}</div>
         <div className="small flex flex-col items-center h-screen mt-4">
           <div className="volunteer">VOLUNTEER</div>
           <div >Email: {userDetail.email}</div>
@@ -122,7 +122,7 @@ function IdCard() {
         </div>
       </div>
       <button
-        className="downLoad mt-20 text-white font-K2D font-normal text-2xl"
+        className="downLoad  lg:p-4 72  mt-20 text-white font-K2D font-normal text-2xl p-0 "
         onClick={downloadAsPDF}
       >
         Download

@@ -42,6 +42,7 @@ function Signup(){
     }catch(error){
            console.log(error)
            toast.error("some thing went wrong ,try again")
+           
     }
   }
  

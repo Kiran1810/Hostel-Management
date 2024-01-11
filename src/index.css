@@ -209,7 +209,7 @@ letter-spacing: 1.35px;
 .downLoad{
   display: flex;
 width: 575px;
-padding: 18px 285px;
+/* padding: 18px 285px; */
 justify-content: center;
 align-items: center;
 gap: 10px; 
