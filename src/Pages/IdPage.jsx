@@ -7,8 +7,10 @@ import Cookies from "js-cookie";
 import { useSelector } from "react-redux";
 import badge from "../Assets/badge.png"
 import badge2 from "../Assets/badge2.png"
-import image from "../Assets/SignUppageImage.png"
+import image from "../Assets/SignUppageImage.png";
 import { useNavigate } from "react-router-dom";
+import { Button} from "@material-tailwind/react";
+
 
 
 function IdCard() {
@@ -121,15 +123,19 @@ function IdCard() {
           <div>Contact No: {userDetail.number}</div>
         </div>
       </div>
-      <button
-        className="downLoad  lg:p-4 72  mt-20 text-white font-K2D font-normal text-2xl p-0 "
-        onClick={downloadAsPDF}
-      >
-        Download
-      </button>
+      <Button
+          onClick={downloadAsPDF}
+          className="mt-6 bg-blue-950 text-white rounded-lg signUp"
+          fullWidth
+          color="white"
+          type="submit"
+        >
+          DownLoad
+        </Button>
     </div>
 
-   
+    <div className=" h-screen hidden md:block w-1/2" style={flagStyle}></div>
+
     
     </>
   );
