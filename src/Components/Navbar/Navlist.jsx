@@ -59,7 +59,7 @@ function Navbar() {
             <img
         src={LogoImage}
         alt="LogoImage"
-        className="w-11 h-11 ml-3 lg:w-14 lg:h-14 lg:ml-8"
+        className="w-16 h-16 ml-3 lg:w-16 lg:h-16  lg:ml-8"
       />
 
               </Link>
@@ -70,7 +70,7 @@ function Navbar() {
               <li key={item.name}>
                 <button
                 onClick={() => navigate(item.slug)}
-                className='inline-bock lg:px-6 lg:py-2 px-2 py-2 duration-200 text-white'
+                className='inline-bock lg:px-6 lg:py-2 px-2 py-2 lg:text-2xl text-xs duration-200 text-white'
                 >{item.name}</button>
               </li>
             ) : null

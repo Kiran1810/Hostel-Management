@@ -24,7 +24,7 @@ function HomePage() {
     <Navbar/>
 </div>
     <div
-      className="flex flex-col items-center overflow-hidden lg:h-screen bg-cover bg-center w-full h-full"
+      className="flex flex-col  items-center overflow-hidden lg:h-screen bg-cover bg-center w-full h-full "
       style={{
         backgroundImage: `url(${backgroundImageImage})`,
       }}
@@ -33,7 +33,7 @@ function HomePage() {
       <img
         src={constellationImage}
         alt="Constellation"
-        className="w-28 h-28 lg:w-64 lg:h-64  object-contain ml-auto "
+        className="w-52 h-48 lg:w-96 lg:h-96  object-contain ml-auto "
       />
       <div>
       <div className=" font-K2D text-center text-gray-300 flex justify-center lg:text-4xl lg:w-screen w-56 text " >
@@ -56,7 +56,7 @@ function HomePage() {
       <img
         src={jupiterImage}
         alt="jupitor"
-        className="w-28 h-28 lg:w-64 lg:h-64  object-contain mr-auto"
+        className="w-52 h-48 lg:w-80 lg:h-80  object-contain mr-auto"
       />
     </div>
     <AboutUsPage/>

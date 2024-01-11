@@ -25,7 +25,7 @@ const Footer = () => {
       <div className="mx-auto w-full lg:px-8 px-2 border-t-2 border-blue-gray-50 pt-4">
         <div className="grid grid-cols-1 justify-between gap-4 md:grid-cols-2">
           <Typography variant="h5" className="lg:mt-6 lg:pl-20 ml-2 text-gray-100 items-center flex justify-start">
-            <img src={Logo} alt="ESummit @ NITH" className="lg:p-8 p-3 lg:w-48 lg:h-48 w-32 h-32 border-white border-r-2" />
+            <img src={Logo} alt="ESummit @ NITH" className="lg:ml-11 p-3  lg:w-48 lg:h-48 w-32 h-32 border-white border-r-2" />
             <h1 className="w-48 text-xl ml-4 font-serif">THE<br />ENTREPRENEUR CELL <br /><br />NIT HAMIRPUR</h1>
           </Typography>
           <div className="grid grid-cols-3 text-md font-kelly mt-4 justify-between gap-4">

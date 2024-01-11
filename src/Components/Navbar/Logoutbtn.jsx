@@ -9,7 +9,7 @@ function LogoutBtn() {
     }
   return (
     <button
-    className='inline-bock px-6 py-2 duration-200 text-white'
+    className='inline-bock px-6 py-2 duration-200 text-white lg:text-2xl text-xs'
     onClick={logoutHandler}
     >Logout</button>
   )
