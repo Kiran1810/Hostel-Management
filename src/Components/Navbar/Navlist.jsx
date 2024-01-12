@@ -59,12 +59,12 @@ function Navbar() {
             <img
         src={LogoImage}
         alt="LogoImage"
-        className="w-16 h-16 ml-3 lg:w-16 lg:h-16  lg:ml-8"
+        className="  ml-3 h-[42px] lg:h-[154px] lg:ml-8 absolute"
       />
 
               </Link>
           </div>
-          <ul className='flex lg:ml-auto ml-auto'>
+          <ul className='flex  lg:ml-auto ml-auto'>
             {navItems.map((item) => 
             item.active ? (
               <li key={item.name}>
