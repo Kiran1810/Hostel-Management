@@ -19,12 +19,12 @@ function Navbar() {
     }, 
     {
       name: 'Our-Team',
-      slug: "Team",
+      slug: "/Team",
       active: true
     }, 
     {
       name: 'My-Profile',
-      slug: "app",
+      slug: "/app",
       active: authStatus
     }, 
     {

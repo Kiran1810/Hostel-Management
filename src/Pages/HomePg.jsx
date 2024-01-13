@@ -11,23 +11,22 @@ import SpeakersPage from "./SpeakersPg";
 import Footer from "../Components/Footer/Footer";
 import "../index.css";
 
-
 function HomePage() {
     return (
         <>
-            <div className="">
-                <Navbar />
-            </div>
             <div
                 className="flex flex-col items-center overflow-hidden lg:h-screen bg-cover bg-center w-full h-full  "
                 style={{
                     backgroundImage: `url(${backgroundImageImage})`,
                 }}
             >
+                <div className="z-[10] w-full">
+                    <Navbar />
+                </div>
                 <img
                     src={constellationImage}
                     alt="Constellation"
-                    className="w-52 h-48 lg:w-96 lg:h-96  object-contain ml-auto absolute top-5 right-5 "
+                    className="z-[1] w-52 h-48 lg:w-96 lg:h-96  object-contain ml-auto absolute top-5 right-5 "
                 />
                 <div className=" mt-[20%] lg:mt-[8%]">
                     <div className=" font-K2D pl-[8px] text-gray-300  lg:text-4xl mt-[1rem] lg:my-[2.5rem]">
@@ -63,7 +62,6 @@ function HomePage() {
             <div className="bg-black  ">
                 <Sponsors />
             </div>
-       
 
             <div className="bg-black py-14">
                 <Footer />
