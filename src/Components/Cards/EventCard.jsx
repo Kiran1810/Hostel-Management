@@ -31,7 +31,7 @@ export function DialogDefault({ isOpen, onClose, name, description, prize }) {
             <DialogBody className="ml-11 mr-11 lg:mb-5 mb-2 lg:p-4 p-0 lg:text-3xl text-xs text-Play">
                 {description}
             </DialogBody>
-            <DialogFooter className="w-full flex flex-row justify-around">
+            <DialogFooter className="lg:w-full flex flex-row justify-around">
                 <div className="flex flex-row items-center mr-4 gap-4">
                     <img
                         src={Loyalty}
@@ -49,14 +49,14 @@ export function DialogDefault({ isOpen, onClose, name, description, prize }) {
                     </div>
                 </div>
 
-                <Button
+                <div><Button
                     variant="gradient"
                     color="green"
                     onClick={onClose}
-                    className="lg:px-6 px-2 lg:mt-0 mt-6 ml-52  lg:ml-0 "
+                    className="lg:px-6 px-2 lg:mt-0  lg:ml-0 "
                 >
                     <span>Confirm</span>
-                </Button>
+                </Button></div>
             </DialogFooter>
         </Dialog>
     );
