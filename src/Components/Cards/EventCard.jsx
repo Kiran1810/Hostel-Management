@@ -14,31 +14,34 @@ export function DialogDefault({ isOpen, onClose, name,description,prize}) {
   return (
     <Dialog
       open={isOpen}
+      type size="xl"
       handler={onClose}
-      className="flex flex-col lg:h-screen items-center text-white overflow-y-auto space-y-5 over w-44 h-auto"
+      className="flex flex-col lg:w-[1014.691px] lg:h-auto items-center text-white overflow-y-auto space-y-5 over w-44 h-auto"
     >
       <img src={CardIcon} alt="cardIcon" className=" h-10 w-10  lg:h-44 lg:w-44  mt-5" />
 
-      <DialogHeader className="lg:text-2xl text-base lg:p-4 p-0">{name}</DialogHeader>
-      <DialogBody className="ml-11 mr-11 lg:mb-5 mb-2 lg:p-4 p-0 lg:text-base text-xs">
+      <DialogHeader className="lg:text-5xl text-white text-base font-Rocker lg:p-4 p-0 ">{name}</DialogHeader>
+      <DialogBody className="ml-11 mr-11 lg:mb-5 mb-2 lg:p-4 p-0 lg:text-3xl text-xs text-Play">
         {description}
       </DialogBody>
-      <DialogFooter className="flex flex-row justify-between">
-        <div className="flex flex-row mr-20">
+      <DialogFooter className="flex flex-row lg:justify-between">
+        <div className="flex flex-row  lg:justify-between">
           <div className="flex flex-row items-center mr-4">
-            <img src={Loyalty} alt="loyalty" className="mr-2 lg:14 lg:h-14 w-10 h-10" />
-            <div>team</div>
+            <img src={Loyalty} alt="loyalty" className="mr-2 lg:14 lg:h-14 w-10 h-10 " />
+            <div className="font-Play lg:text-3xl ">Team</div>
           </div>
           <div className="flex flex-row items-center">
-            <img src={Money} alt="loyalty" className="mr-2 lg:11 lg:h-11 w-10 h-10" />
-            <div>prize</div>
+            <img src={Money} alt="loyalty" className="mr-2 lg:11 lg:h-11 w-10 h-10 font-Play" />
+            <div className="font-Play lg:text-3xl ">Prize</div>
           </div>
-          </div> 
-          <div>
-        <Button variant="gradient" color="green" onClick={onClose} className="lg:px-6 px-2 lg:mt-0 mt-6 ml-52 lg:ml-0 ">
-          <span>Confirm</span>
-        </Button>
-        </div>
+         
+        <div>
+        </div> 
+          <Button variant="gradient" color="green" onClick={onClose} className="lg:px-6 px-2 lg:mt-0 mt-6 ml-52  lg:ml-0 ">
+            <span>Confirm</span>
+          </Button>
+         </div>
+        
         
       </DialogFooter>
     </Dialog>
@@ -76,9 +79,9 @@ function EventCard({name,event_date,description}) {
         onClick={handleCardClick}
       >
         <img src={CardIcon} alt="cardIcon" className="h-4 w-4 lg:h-14 lg:w-14 mt-5" />
-        <div className="ml-8 mr-8 mt-2 pb-3 space-y-4 text-xs lg:text-base">
-          <div className="font-kelly">{name}</div>
-          <div className="font-kelly">Coming In</div>
+        <div className="ml-8 mr-8 mt-2 pb-3 lg:p-3 space-y-4 text-xs lg:text-3xl">
+          <div className="font-Play">{name}</div>
+          <div className="font-Play">Coming In</div>
           <div className="font-Rocker">{event_date}</div>
         </div>
       </div>

@@ -4,6 +4,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Kelly+Slab&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Kelly+Slab&family=New+Rocker&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -131,8 +132,7 @@ box-shadow: 0px 9.106px 9.106px 22.764px rgba(0, 0, 0, 0.25);
 .sponsersName{
   color: #FFF;
 
-font-family: Playfair Display SC;
-font-size: 45.673px;
+
 font-style: normal;
 font-weight: 400;
 line-height: normal;

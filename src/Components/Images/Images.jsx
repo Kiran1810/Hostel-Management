@@ -30,7 +30,7 @@ function Images({ description, image, name,linkdin,insta,facebook }) {
         <img
           src={image}
           alt="avatar"
-          className="p-0.5 rounded-full lg:w-auto lg:h-auto w-16 h-16 my-auto mx-auto-block"
+          className="p-0.5 rounded-full lg:w-[200px] lg:h-[200px] w-16 h-16 my-auto mx-auto-block"
         />
       </div>
       <Dialog
@@ -82,8 +82,8 @@ function Images({ description, image, name,linkdin,insta,facebook }) {
                   </div>
                 }
               </div>
-              <div className="text-white pt-8 sponsersName">{name}</div>
-              <div className="text-white pt-8">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus necessitatibus consectetur architecto accusantium quae officiis quos ipsam cumque modi dignissimos, reprehenderit perspiciatis alias aspernatur, quo doloremque, pariatur sunt. Eaque, optio nihil. Voluptatibus quasi itaque explicabo totam, voluptas facere. Quia minus minima maxime magni accusamus hic eos perferendis tenetur rem distinctio.</div>
+              <div className="text-white pt-8  font-Play text-3xl lg:text-5xl">{name}</div>
+              <div className="text-white pt-8 font-K2D lg:text-3xl">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus necessitatibus consectetur architecto accusantium quae officiis quos ipsam cumque modi dignissimos, reprehenderit perspiciatis alias aspernatur, quo doloremque, pariatur sunt. Eaque, optio nihil. Voluptatibus quasi itaque explicabo totam, voluptas facere. Quia minus minima maxime magni accusamus hic eos perferendis tenetur rem distinctio.</div>
             </div>
           </div>
         </DialogBody>

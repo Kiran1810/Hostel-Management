@@ -22,12 +22,12 @@ function SpeakersPage() {
   };
 
   return (
-    <div className="bg-black pb-0 pt-2 lg:pb-4 lg:pt-16 pl-6 ">
+    <div className="bg-black pb-0 pt-2  lg:pt-16 pl-6 lg:pb-28  ">
       
-      <div className="flex flex-col-reverse lg:flex-row  lg:ml-24 lg:mr-20">
+      <div className="flex flex-col-reverse lg:flex-row justify-between  lg:mr-20">
         <div className="flex flex-col lg:items-center pt-8  lg:ml-10">
-          <div className="  text-blue-300 text-2xl font-bold leading-normal tracking-wider bg-gradient-to-r from-blue-300 via-blue-800 to-blue-800 bg-clip-text text-transparent   lg:text-transparent lg:bg-gradient-to-r lg:from-blue-300 lg:to-blue-800 lg:bg-clip-text lg:font-playfair lg:font-bold lg:text-6xl font-Play ">OUR SPEAKERS</div>
-          <div className="text-white sm:text-center ">
+          <div className=" flex justify-center text-blue-300 text-2xl font-bold leading-normal tracking-wider bg-gradient-to-r from-blue-300 via-blue-800 to-blue-800 bg-clip-text text-transparent   lg:text-transparent lg:bg-gradient-to-r lg:from-blue-300 lg:to-blue-800 lg:bg-clip-text  lg:font-bold lg:text-6xl font-Play ">OUR SPEAKERS</div>
+          <div className=" p-6 lg:w-[700px] font-Roboto lg:text-3xl text-xs text-white ">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque
             reiciendis, fuga soluta atque itaque suscipit alias repudiandae
             exercitationem quidem totam!. Lorem ipsum dolor sit, amet

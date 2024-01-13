@@ -34,7 +34,7 @@ function SpeakerCard({ onClick ,image,name,description,linkedin_url,instagram_ur
             alt="speakerImage"
             className="object-contain rounded-full lg:w-32 lg:h-32 w-10 h-10 "
           />
-            <div className="svg-container absolute bottom-2 right-40 space-y-8">
+            <div className="svg-container absolute bottom-2 left-44 space-y-8">
 
             <a href={linkedin_url} target="_blank" rel="noopener noreferrer" onClick={handleIconClick}>
                <svg width="29" height="20" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ marginBottom: '1rem' }}>

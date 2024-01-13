@@ -6,24 +6,21 @@ return(
     <div className="flex flex-col bg-black ">
       <div className="flex flex-col-reverse lg:flex-row  ml-20 mr-20 ">
         <div className="text-white place-items-center ">
-           <div className="what2 sm:what   pt-8">
+           <div className="font-Play text-white text-2xl font-bold leading-normal tracking-wider bg-gradient-to-r  bg-clip-text   lg:bg-clip-text  lg:font-bold lg:text-6xl">
             WHAT IS   
            </div>
            <div className="font-Play text-blue-300 text-2xl font-bold leading-normal tracking-wider bg-gradient-to-r from-blue-300 via-blue-800 to-blue-800 bg-clip-text text-transparent   lg:text-transparent lg:bg-gradient-to-r lg:from-blue-300 lg:to-blue-800 lg:bg-clip-text lg:font-playfair lg:font-bold lg:text-6xl">
             E-SUMMIT?
            </div>
-           <div className="lg:pt-8 pt-4  ">
-             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque dicta earum ad minima blanditiis porro a cumque neque
-              laboriosam, commodi esse nulla quae magnam exercitationem, at nemo. Cumque, reiciendis.
-             Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus quisquam sit officia saepe incidunt
-              magni sunt quibusdam error tempore? Eos?
+           <div className="lg:pt-8 pt-4 lg:w-[600px] font-Roboto lg:text-3xl text-xs">
+         rerum a, incidunt, saepe doloremque modi accusamus. Officiis molestiae, esse optio, dolorem quas a autem excepturi tenetur nisi praesentium inventore fugit voluptate id dolorum animi quos cumque dolor maxime odit? Iusto, eaque eos quis animi fugit ipsum eius commodi dignissimos quod. Aspernatur sint, soluta unde ipsam cupiditate ullam odio reprehenderit commodi!
            </div>
          </div>
-        <div className="place-items-center ">
+        <div className=" ">
             <img
             src={personImage}
             alt="personImage"
-            className=" object-contain ml-10 p-5 "
+            className=" object-contain ml-10 p-5 lg:w-[600px] lg:h-[521px]"
             />
          </div>
       </div>

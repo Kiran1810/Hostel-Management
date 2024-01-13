@@ -34,7 +34,7 @@ function Sponsors(){
             <div className="flex flex-row-reverse">
                 <img
                 src={SponsorImage}
-                className="lg:w-80 w-24"
+                className="lg:w-80 w-24 lg:absolute lg:top-[2858px] "
 
                 />
             </div>

@@ -22,7 +22,7 @@ function HomePage() {
                 <Navbar />
             </div>
             <div
-                className="flex flex-col   items-center overflow-hidden lg:h-screen bg-cover bg-center w-full h-full  "
+                className="flex flex-col items-center overflow-hidden lg:h-screen bg-cover bg-center w-full h-full  "
                 style={{
                     backgroundImage: `url(${backgroundImageImage})`,
                 }}
