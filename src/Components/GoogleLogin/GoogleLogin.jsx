@@ -5,7 +5,7 @@ const GoogleLoginButton = () => {
   
 
   return (
-    <button>Login with Google</button>
+    <button className='font-K2D text-base flex justify-center '>Login with Google</button>
   );
 };
 

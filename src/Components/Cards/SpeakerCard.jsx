@@ -22,9 +22,9 @@ function SpeakerCard({ onClick ,image,name,description,linkedin_url,instagram_ur
   };
 
   return (
-    <div className="flex flex-col items-center Speaker w-44 h-48 lg:w-80 lg:h-80 p-4 2 6 2 lg:p-10 8 14 8 space-y-4 mt-8 " onClick={handleClick}>
+    <div className="flex flex-col items-center Speaker w-44 h-48 lg:w-80 lg:h-[350px] p-4 2 6 2 lg:p-10 8 14 8 space-y-4 mt-8 " onClick={handleClick}>
       {showParagraph ? (
-        <div className="text-white text-xs lg:text-base">
+        <div className="text-white text-xs lg:text-xl font-k2d">
          {description}
         </div>
       ) : (
@@ -56,9 +56,9 @@ function SpeakerCard({ onClick ,image,name,description,linkedin_url,instagram_ur
                
                 </div>
 
-          <div className="lg:space-y-3 space-y-1 text-white text-xs lg:text-base mt-2">
-            <div>{name}</div>
-            <div>Director and Producer</div>
+          <div className="lg:space-y-3 space-y-1 text-white text-xs lg:text-xl mt-2 ">
+            <div className="font-Play">{name}</div>
+            <div className="font-k2d">Director and Producer</div>
           </div>
         </div>
       )}

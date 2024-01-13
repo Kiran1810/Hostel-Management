@@ -22,7 +22,7 @@ function SpeakersPage() {
   };
 
   return (
-    <div className="bg-black pb-0 pt-2  lg:pt-16 pl-6 lg:pb-28  ">
+    <div className="bg-black pb-3 pt-2  lg:pt-16 pl-6 lg:pb-28  ">
       
       <div className="flex flex-col-reverse lg:flex-row justify-between  lg:mr-20">
         <div className="flex flex-col lg:items-center pt-8  lg:ml-10">

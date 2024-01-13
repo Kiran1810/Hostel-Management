@@ -87,14 +87,14 @@ function Signup(){
             <div className="font-medium text-5xl">
                 <h1>Sign Up</h1>
             </div>
-            <form onSubmit={handleFormSubmit}>
-            <div className="flex flex-row space-x-8">
-              <div className="label">
-                <label>Name</label>
-                <Input
+            <form onSubmit={handleFormSubmit} className="lg:space-y-0 space-y-3">
+            
+            <div className="label ">
+              <label >Name</label>
+              <Input
                     type="Name"
                     
-                    className="text !border !border-gray-300 rounded  text-gray-900 shadow-lg shadow-gray-900/5 ring-4 ring-transparent placeholder:text-gray-500  bg-gray-200 focus:!border-gray-900 focus:!border-t-gray-900 focus:ring-gray-900/10"
+                    className="text !border !border-gray-300 rounded bg-gray-200 text-gray-900 shadow-lg shadow-gray-900/5 ring-4 ring-transparent placeholder:text-gray-500 focus:!border-gray-900 focus:!border-t-gray-900 focus:ring-gray-900/10"
                     labelProps={{
                     className: "hidden text",
                     }}
@@ -102,12 +102,12 @@ function Signup(){
                     onChange={(e)=>setUserData({
                         ...userData,
                         name:e.target.value
-                    }
-                     )}
+                    })}
                 />
-                 
               </div>
-              <div className="label">
+             
+            
+            <div className="label ">
               <label >Email</label>
               <Input
                     type="email"
@@ -123,7 +123,6 @@ function Signup(){
                     })}
                 />
               </div>
-            </div>
             <div className="label">
             <label>Password</label>
             <Input
@@ -156,22 +155,7 @@ function Signup(){
                     })}
                 />
             </div> 
-            <div className="label">
-            <label>Contact No</label>
-            <Input
-                    type="text"
-                    
-                    className=" text !border !border-gray-300 rounded bg-gray-200 text-gray-900 shadow-lg shadow-gray-900/5 ring-4 ring-transparent placeholder:text-gray-500 focus:!border-gray-900 focus:!border-t-gray-900 focus:ring-gray-900/10"
-                    labelProps={{
-                    className: "hidden text",
-                    }}
-                    containerProps={{ className: "min-w-[100px]" }}
-                    onChange={(e)=>setUserData({
-                        ...userData,
-                        number:e.target.value
-                    })}
-                />
-            </div> 
+           
             <div className="flex items-center">
                 <Checkbox defaultChecked />
                 <span className="ml-2">I've read and agree with the Terms and Service and Privacy Policy</span>

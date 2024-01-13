@@ -34,11 +34,11 @@ function Sponsors(){
             <div className="flex flex-row-reverse">
                 <img
                 src={SponsorImage}
-                className="lg:w-80 w-24 lg:absolute lg:top-[2858px] "
+                className="lg:w-80 w-24 lg:absolute lg:top-[2870px] "
 
                 />
             </div>
-            <div className=" flex flex-col gap-y-20 lg:ml-10 ml-4 mr-10" >
+            <div className=" flex flex-col lg:gap-y-20 gap-y-9 lg:ml-10 ml-4 mr-10" >
                 <div className="font-Play flex justify-center text-blue-300 text-2xl font-bold leading-normal tracking-wider bg-gradient-to-r from-blue-300 via-blue-800 to-blue-800 bg-clip-text text-transparent   lg:text-transparent lg:bg-gradient-to-r lg:from-blue-300 lg:to-blue-800 lg:bg-clip-text lg:font-playfair lg:font-bold lg:text-6xl">
                     Our Sponsors
                 </div>
