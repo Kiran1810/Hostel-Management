@@ -80,7 +80,7 @@ function IdCard() {
       style={{
         backgroundImage: `url(${IdBg})`,
       }}
-      className=" bg-no-repeat lg:w-10/12 h-screen  flex flex-col place-items-center justify-center "
+      className=" bg-no-repeat lg:w-[893px] lg:h-[1127px];  flex flex-col place-items-center justify-center "
     >
 
 
@@ -89,19 +89,19 @@ function IdCard() {
         style={{
           backgroundImage: `url(${Bg})`,
         }}
-        className="bg-cover bg-center InId flex lg:mt-96 flex-col items-center justify-center "
+        className="bg-cover bg-center lg:w-[378px] lg:h-[529px] w-[303px] h-[424px] flex lg:mt-52 mt-80 flex-col items-center justify-center "
       >
       <div className="flex flex-row justify-between space-x-56">
       <img
           src={badge}
           alt="img"
-          className="w-9 h-9"
+          className="lg:w-9 lg:h-9 w-7 h-7  mt-5 ml-2 lg:mt-0" 
           
           />
            <img
           src={badge2}
           alt="img"
-          className="w-9 h-9"
+          className="lg:w-9 lg:h-9 w-7 h-7 mt-5 mr-2 lg:mt-0"
           
           />
       </div>
@@ -112,15 +112,17 @@ function IdCard() {
           
             src={userDetail.image}
             alt="this is the image"
-            className="rounded-full w-28 h-28"
+            className="rounded-full lg:w-28 lg:h-28 w-[90px] h-[90]"
           />
         </div>
         <div className="cardName flex justify-center">{userDetail.name}</div>
-        <div className="small flex flex-col items-center h-screen mt-4">
-          <div className="volunteer">VOLUNTEER</div>
-          <div >Email: {userDetail.email}</div>
-          <div>Colledge: {userDetail.college_name}</div>
-          <div>Contact No: {userDetail.number}</div>
+        <div className="lg:w-[332px] lg:h-[283px] w-[266px] h-[266px] small flex flex-col items-center  mt-4">
+          <div className="volunteer lg:text-3xl text-base font-extrabold">VOLUNTEER</div>
+        <div className="items-start lg:mt-4 mt-0 ">
+          <div className="text-sm font-k2d text-[#0A093F] pt-2" >Email:<span className="text-black text-sm"> {userDetail.email}</span></div>
+          <div className="text-sm font-k2d text-[#0A093F] pt-2">Colledge:<span className="text-black text-sm"> {userDetail.college_name}</span></div>
+          <div className="text-sm font-k2d text-[#0A093F] pt-2">Contact No:<span className="text-black text-sm"> {userDetail.number}</span></div>
+        </div>
         </div>
       </div>
       <Button
