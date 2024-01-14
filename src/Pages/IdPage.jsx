@@ -10,12 +10,15 @@ import badge2 from "../Assets/badge2.png"
 import image from "../Assets/SignUppageImage.png";
 import { useNavigate } from "react-router-dom";
 import { Button} from "@material-tailwind/react";
+import QRCode from 'qrcode-generator';
+
 
 
 
 function IdCard() {
   const idCardRef = useRef(null);
   const navigate =useNavigate()
+  const [qrCode, setQRCode] = useState(null);
   const [userDetail,setUserDetail]=useState({
     name:"",
     image:"https://docs.material-tailwind.com/img/face-2.jpg",  
@@ -52,6 +55,15 @@ function IdCard() {
     const headers = {
       Authorization: `Bearer ${token}`,
   };
+  if (user.id) {
+    const qr = QRCode(0, 'M');
+    qr.addData(`${user.id}`);
+    qr.make();
+
+    setQRCode(qr.createDataURL());
+  } else {
+    setQRCode(null);
+  }
       try{
         axios.get(`https://e-cell-backend2k24.onrender.com/esummit/user/${user.id}/`,{headers})
         .then((response)=>setUserDetail({
@@ -122,8 +134,11 @@ function IdCard() {
           <div className="text-sm font-k2d text-[#0A093F] pt-2" >Email:<span className="text-black text-sm"> {userDetail.email}</span></div>
           <div className="text-sm font-k2d text-[#0A093F] pt-2">Colledge:<span className="text-black text-sm"> {userDetail.college_name}</span></div>
           <div className="text-sm font-k2d text-[#0A093F] pt-2">Contact No:<span className="text-black text-sm"> {userDetail.number}</span></div>
+          {qrCode&&<img src={qrCode} alt="QR Code" className="mt-6 ml-8"/>}
+
         </div>
         </div>
+
       </div>
       <Button
           onClick={downloadAsPDF}
