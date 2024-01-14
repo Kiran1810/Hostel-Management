@@ -20,6 +20,7 @@ const QRScannerComponent = () => {
         onScan={handleScan}
         onError={handleError}
         style={{ width: '100%' }}
+        facingMode="environment" // Specify "environment" for the back camera
       />
       {result && <p>Scanned result: {result}</p>}
     </div>
