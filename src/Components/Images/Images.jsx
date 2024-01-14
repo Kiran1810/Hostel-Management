@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Typography } from '@material-tailwind/react';
 import {
@@ -6,6 +5,7 @@ import {
   DialogHeader,
   DialogBody,
 } from '@material-tailwind/react';
+import cross from "../../Assets/cross.png"
 
 function Images({ description, image, name,linkdin,insta,facebook }) {
   const [isDialogOpen, setDialogOpen] = useState(false);
@@ -38,7 +38,12 @@ function Images({ description, image, name,linkdin,insta,facebook }) {
         handler={() => setDialogOpen(false)}
         className="sponserCard bg-black  lg:m-4 m-1"
       >
-        <DialogHeader></DialogHeader>
+        <DialogHeader>
+          <img
+          src={cross}
+          alt="img"
+          onClick={()=>setDialogOpen(false)}/>
+        </DialogHeader>
         <DialogBody>
           <div className="flex flex-row justify-normal  ">
             

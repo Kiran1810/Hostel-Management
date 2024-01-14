@@ -9,8 +9,53 @@ import {
     DialogFooter,
 } from "@material-tailwind/react";
 import Money from "../../Assets/money2.png";
+import axios from "axios";
+import { useSelector } from "react-redux";
+import Cookies from "js-cookie";
 
-export function DialogDefault({ isOpen, onClose, name, description, prize }) {
+
+export function DialogDefault({ id,isOpen, onClose, name, description, prize}) {
+    const user = useSelector((state) => state.auth.userData);
+    const [upload,setUpload]=useState(false)
+    const [isRegisterd,setIsRegistered]=useState(false)
+    async function handleLogin() {
+        const authToken = Cookies.get("myToken");
+    
+        const headers = {
+          Authorization: `Bearer ${authToken}`,
+        };
+    
+        try {
+          const response = await axios.get(`https://e-cell-backend2k24.onrender.com/esummit/update/user/${user.id}/`, {
+            headers,
+          });
+    
+          const currentUserData = response.data;
+    
+          if (!currentUserData.registered_events.includes(id)) {
+            const updatedRegisteredEvents = [...currentUserData.registered_events, id];
+    
+            await axios.patch(
+              `https://e-cell-backend2k24.onrender.com/esummit/update/user/${user.id}/`,
+              {
+                registered_events: updatedRegisteredEvents,
+              },
+              { headers }
+            );
+            setIsRegistered(true)
+            setUpload(false);
+            onClose();
+          } else {
+            console.warn("Event ID is already registered for this user.");
+            setUpload(false);
+          }
+        } catch (error) {
+          console.error("Error updating registered events:", error);
+          setUpload(false);
+        }
+      }
+
+
     return (
         <Dialog
             open={isOpen}
@@ -45,17 +90,20 @@ export function DialogDefault({ isOpen, onClose, name, description, prize }) {
                             alt="loyalty"
                             className="mr-2 lg:11 lg:h-11 w-10 h-10 font-Play"
                         />
-                        <div className="font-Play lg:text-3xl ">Prize</div>
+                        <div className="font-Play lg:text-3xl ">{prize}</div>
                     </div>
                 </div>
 
                 <div><Button
                     variant="gradient"
                     color="green"
-                    onClick={onClose}
+                    onClick={handleLogin}
                     className="lg:px-6 px-2 lg:mt-0  lg:ml-0 "
-                >
-                    <span>Confirm</span>
+                >   {isRegisterd?<span>Registered</span>:<span>{upload? "Registering...": "Register"}</span>
+
+                }
+
+               
                 </Button></div>
             </DialogFooter>
         </Dialog>
@@ -64,7 +112,7 @@ export function DialogDefault({ isOpen, onClose, name, description, prize }) {
 
 const cards = ["card", "card2", "card3", "card4"];
 
-function EventCard({ name, event_date, description }) {
+function EventCard({ name, event_date, description ,id,prize}) {
     const [activeCardIndex, setActiveCardIndex] = useState(0);
     const [isDialogOpen, setDialogOpen] = useState(false);
 
@@ -107,6 +155,8 @@ function EventCard({ name, event_date, description }) {
             <DialogDefault
                 name={name}
                 description={description}
+                id={id}
+                prize={prize}
                 isOpen={isDialogOpen}
                 onClose={handleCloseDialog}
             />
