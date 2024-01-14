@@ -1,6 +1,5 @@
 
 import React, { useState } from 'react';
-import SpeakerImage2 from '../../Assets/Speaker2Image.png'; 
 import { Typography } from '@material-tailwind/react';
 import {
   Dialog,

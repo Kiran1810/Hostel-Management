@@ -11,6 +11,7 @@ import HomePage from "./Pages/HomePg";
 
 import LogInPg from "./Pages/LogInPg";
 import IdCard from "./Pages/IdPage"
+import QRScannerComponent from "./Pages/QrScanning";
 
 import TogglePage from "./Pages/TogglePage";
 import { GoogleOAuthProvider } from "@react-oauth/google";
@@ -34,6 +35,8 @@ root.render(
                         <Route path="/login" element={<LogInPg />} />
                         <Route path="/team" element={<TeamPg />} />
                         <Route path="/contactUs" element={<SimpleRegistrationForm />} />
+                        <Route path="/scan" element={<QRScannerComponent/>} />
+
 
 
                     </Routes>

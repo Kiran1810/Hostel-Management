@@ -18,6 +18,11 @@ function Navbar() {
       active: true
     }, 
     {
+      name: 'Scan',
+      slug: "/scan",
+      active: true
+    }, 
+    {
       name: 'Our-Team',
       slug: "/Team",
       active: true
