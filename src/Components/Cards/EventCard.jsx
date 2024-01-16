@@ -12,12 +12,32 @@ import Money from "../../Assets/money2.png";
 import axios from "axios";
 import { useSelector } from "react-redux";
 import Cookies from "js-cookie";
+import { useNavigate } from "react-router-dom";
 
 
 export function DialogDefault({ id,isOpen, onClose, name, description, prize}) {
     const user = useSelector((state) => state.auth.userData);
+    const navigate =useNavigate();
     const [upload,setUpload]=useState(false)
     const [isRegisterd,setIsRegistered]=useState(false)
+    
+    useEffect(()=>{
+        const authToken = Cookies.get("myToken")
+    
+        const headers = {
+          Authorization: `Bearer ${authToken}`
+        }
+
+    if(user && user.id) {   axios.get(`https://e-cell-backend2k24.onrender.com/esummit/update/user/${user.id}/`, {
+            headers,
+          }).then((res)=>(res.data.registered_events.includes(id)&&setIsRegistered(true)
+          ))}
+          
+        },[])
+
+
+
+
     async function handleLogin() {
         const authToken = Cookies.get("myToken");
     
@@ -31,6 +51,7 @@ export function DialogDefault({ id,isOpen, onClose, name, description, prize}) {
           });
     
           const currentUserData = response.data;
+
     
           if (!currentUserData.registered_events.includes(id)) {
             const updatedRegisteredEvents = [...currentUserData.registered_events, id];
@@ -42,14 +63,16 @@ export function DialogDefault({ id,isOpen, onClose, name, description, prize}) {
               },
               { headers }
             );
-            setIsRegistered(true)
             setUpload(false);
             onClose();
           } else {
+            // setIsRegistered(true)
+
             console.warn("Event ID is already registered for this user.");
             setUpload(false);
           }
         } catch (error) {
+
           console.error("Error updating registered events:", error);
           setUpload(false);
         }
