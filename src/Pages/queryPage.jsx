@@ -14,12 +14,13 @@ import {
     const [query, setQuery] = useState("");
   
     return (
-      <div className="flex justify-center items-center h-screen">
+      <div className="flex justify-center items-center p-6 lg:p-8">
         <Card color="transparent" shadow={false}>
-          <Typography variant="h4" color="white" className="text-center text-6xl">
+          <Typography variant="h4" color="white" className="text-center text-2xl lg:text-5xl font-Play">
             CONTACT US
           </Typography>
-          <form className="mt-8 mb-2 w-96 max-w-screen-lg sm:w-96">
+          <div className="ml-6 mr-6  ">
+          <form className="mt-8 mb-2 max-w-screen-lg w-96 lg:w-98">
             <div className="mb-6 flex flex-col gap-8">
               <div className="flex flex-col relative">
                 <label
@@ -33,13 +34,13 @@ import {
                   placeholder=""
                   value={name}
                   onChange={(e) => setName(e.target.value)}
-                  className="!border-t-blue-gray-200 focus:!border-t-gray-900 w-full pl-2"
+                  className="!border-t-blue-gray-200 focus:!border-t-gray-900 lg:w-full pl-1"
                   labelProps={{
                     className: "before:content-none after:content-none",
                   }}
                 />
               </div>
-              <div className="flex flex-row gap-4">
+              <div className="flex flex-row  gap-[0.2] lg:gap-0.5">
                 <div className="flex flex-col relative">
                   <label
                     htmlFor="phone"
@@ -52,7 +53,7 @@ import {
                     placeholder=""
                     value={phone}
                     onChange={(e) => setPhone(e.target.value)}
-                    className="!border-t-blue-gray-200 focus:!border-t-gray-900 w-full pl-2"
+                    className="!border-t-blue-gray-200 focus:!border-t-gray-900 w-[180px] lg:w-[180px] pl-1"
                     labelProps={{
                       className: "before:content-none after:content-none",
                     }}
@@ -71,7 +72,7 @@ import {
                     placeholder=""
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    className="!border-t-blue-gray-200 focus:!border-t-gray-900 w-full pl-2"
+                    className="!border-t-blue-gray-200 focus:!border-t-gray-900 w-[184px] lg:w-[185px] pl-2"
                     labelProps={{
                       className: "before:content-none after:content-none",
                     }}
@@ -90,7 +91,7 @@ import {
                   placeholder=""
                   value={query}
                   onChange={(e) => setQuery(e.target.value)}
-                  className="!border-t-blue-gray-200 focus:!border-t-gray-900 w-full pl-2"
+                  className="!border-t-blue-gray-200 focus:!border-t-gray-900 lg:w-full pl-2"
                   labelProps={{
                     className: "before:content-none after:content-none",
                   }}
@@ -98,8 +99,9 @@ import {
               </div>
             </div>
   
-            <Button className="bg-blue-600 text-2xl px-8 py-3">Submit</Button>
+            <Button className="bg-blue-600 text-xl lg:text-xl lg:px-6 lg:py-2 ">submit</Button>
           </form>
+          </div>
         </Card>
       </div>
     );
