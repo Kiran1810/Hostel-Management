@@ -8,6 +8,7 @@ import AboutUsPage from "./AboutusPg";
 import Events from "./Events";
 import Sponsors from "./Sponsors";
 import SpeakersPage from "./SpeakersPg";
+import QueryContactPage from "./queryPage"
 import Footer from "../Components/Footer/Footer";
 import "../index.css";
 
@@ -61,6 +62,9 @@ function HomePage() {
             </div>
             <div className="bg-black  ">
                 <Sponsors />
+            </div>
+            <div className="bg-black  ">
+                <QueryContactPage />
             </div>
 
             <div className="bg-black py-14">
