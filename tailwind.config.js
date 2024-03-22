@@ -11,9 +11,10 @@ module.exports = withMT({
                 K2D: ["K2D", "sans-serif"],
                 kelly: ["Kelly Slab", "sans-serif"],
                 Rocker: ["New Rocker", "sans-serif"],
-                Play:['Playfair Display', "seri"],
-                Roboto:[ 'Roboto', "sans-serif"]
-
+                Play: ["Playfair Display", "seri"],
+                Roboto: ["Roboto", "sans-serif"],
+                Gelasio: ["Gelasio", "sans-serif"],
+                Playfair: ["Playfair Display", "sans-serif"],
             },
         },
     },
