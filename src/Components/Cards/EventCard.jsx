@@ -14,70 +14,89 @@ import { useSelector } from "react-redux";
 import Cookies from "js-cookie";
 import { useNavigate } from "react-router-dom";
 
-
-export function DialogDefault({ id,isOpen, onClose, name, description, prize}) {
+export function DialogDefault({
+    id,
+    isOpen,
+    onClose,
+    name,
+    description,
+    prize,
+}) {
     const user = useSelector((state) => state.auth.userData);
-    const navigate =useNavigate();
-    const [upload,setUpload]=useState(false)
-    const [isRegisterd,setIsRegistered]=useState(false)
-    
-    useEffect(()=>{
-        const authToken = Cookies.get("myToken")
-    
+    const navigate = useNavigate();
+    const [upload, setUpload] = useState(false);
+    const [isRegisterd, setIsRegistered] = useState(false);
+    const [login, setLogin] = useState(true);
+
+    useEffect(() => {
+        const authToken = Cookies.get("myToken");
+
         const headers = {
-          Authorization: `Bearer ${authToken}`
+            Authorization: `Bearer ${authToken}`,
+        };
+        if (!user) {
+            setLogin(false);
         }
 
-    if(user && user.id) {   axios.get(`https://e-cell-backend2k24.onrender.com/esummit/update/user/${user.id}/`, {
-            headers,
-          }).then((res)=>(res.data.registered_events.includes(id)&&setIsRegistered(true)
-          ))}
-          
-        },[])
-
-
-
+        if (user && user.id) {
+            axios
+                .get(
+                    `https://e-cell-backend2k24-tppt.onrender.com/esummit/update/user/${user.id}/`,
+                    {
+                        headers,
+                    }
+                )
+                .then(
+                    (res) =>
+                        res.data.registered_events.includes(id) &&
+                        setIsRegistered(true)
+                );
+        }
+    }, [isRegisterd]);
 
     async function handleLogin() {
         const authToken = Cookies.get("myToken");
-    
+
         const headers = {
-          Authorization: `Bearer ${authToken}`,
+            Authorization: `Bearer ${authToken}`,
         };
-    
+
         try {
-          const response = await axios.get(`https://e-cell-backend2k24.onrender.com/esummit/update/user/${user.id}/`, {
-            headers,
-          });
-    
-          const currentUserData = response.data;
-
-    
-          if (!currentUserData.registered_events.includes(id)) {
-            const updatedRegisteredEvents = [...currentUserData.registered_events, id];
-    
-            await axios.patch(
-              `https://e-cell-backend2k24.onrender.com/esummit/update/user/${user.id}/`,
-              {
-                registered_events: updatedRegisteredEvents,
-              },
-              { headers }
+            const response = await axios.get(
+                `https://e-cell-backend2k24-tppt.onrender.com/esummit/update/user/${user.id}/`,
+                {
+                    headers,
+                }
             );
-            setUpload(false);
-            onClose();
-          } else {
-            // setIsRegistered(true)
 
-            console.warn("Event ID is already registered for this user.");
-            setUpload(false);
-          }
+            const currentUserData = response.data;
+
+            if (!currentUserData.registered_events.includes(id)) {
+                const updatedRegisteredEvents = [
+                    ...currentUserData.registered_events,
+                    id,
+                ];
+
+                await axios.patch(
+                    `https://e-cell-backend2k24-tppt.onrender.com/esummit/update/user/${user.id}/`,
+                    {
+                        registered_events: updatedRegisteredEvents,
+                    },
+                    { headers }
+                );
+                setUpload(false);
+                onClose();
+            } else {
+                // setIsRegistered(true)
+
+                console.warn("Event ID is already registered for this user.");
+                setUpload(false);
+            }
         } catch (error) {
-
-          console.error("Error updating registered events:", error);
-          setUpload(false);
+            console.error("Error updating registered events:", error);
+            setUpload(false);
         }
-      }
-
+    }
 
     return (
         <Dialog
@@ -117,17 +136,26 @@ export function DialogDefault({ id,isOpen, onClose, name, description, prize}) {
                     </div>
                 </div>
 
-                <div><Button
-                    variant="gradient"
-                    color="green"
-                    onClick={handleLogin}
-                    className="lg:px-6 px-2 lg:mt-0  lg:ml-0 "
-                >   {isRegisterd?<span>Registered</span>:<span>{upload? "Registering...": "Register"}</span>
-
-                }
-
-               
-                </Button></div>
+                <div>
+                    <Button
+                        variant="gradient"
+                        color="green"
+                        onClick={handleLogin}
+                        className="lg:px-6 px-2 lg:mt-0  lg:ml-0 "
+                    >
+                        {user ? (
+                            isRegisterd ? (
+                                <span>Registered</span>
+                            ) : (
+                                <span>
+                                    {upload ? "Registering..." : "Register"}
+                                </span>
+                            )
+                        ) : (
+                            <span>Please Login</span>
+                        )}
+                    </Button>
+                </div>
             </DialogFooter>
         </Dialog>
     );
@@ -135,7 +163,7 @@ export function DialogDefault({ id,isOpen, onClose, name, description, prize}) {
 
 const cards = ["card", "card2", "card3", "card4"];
 
-function EventCard({ name, event_date, description ,id,prize}) {
+function EventCard({ name, event_date, description, id, prize }) {
     const [activeCardIndex, setActiveCardIndex] = useState(0);
     const [isDialogOpen, setDialogOpen] = useState(false);
 

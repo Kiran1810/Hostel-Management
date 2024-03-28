@@ -20,17 +20,16 @@ function Login() {
         e.preventDefault();
         try {
             const response = await axios.post(
-                `https://e-cell-backend2k24.onrender.com/esummit/login/`,
+                `https://e-cell-backend2k24-tppt.onrender.com/esummit/login/`,
                 userData
             );
-            console.log(response)
-            Cookies.set('myToken',response.data.token.access,
-            {expires:30})
-            dispatch(login(response.data))
-            navigate('/')
+            console.log(response);
+            Cookies.set("myToken", response.data.token.access, { expires: 30 });
+            dispatch(login(response.data));
+            navigate("/");
         } catch (error) {
             console.log(error);
-            toast.error("Something went wrong , try again")
+            toast.error("Something went wrong , try again");
         }
     };
 
@@ -91,17 +90,17 @@ function Login() {
                     Log In
                 </Button>
                 <ToastContainer
-                        position="bottom-right"
-                        autoClose={5000}
-                        hideProgressBar
-                        newestOnTop={false}
-                        closeOnClick
-                        rtl={false}
-                        pauseOnFocusLoss
-                        draggable
-                        pauseOnHover
-                        theme="dark"
-                    />
+                    position="bottom-right"
+                    autoClose={5000}
+                    hideProgressBar
+                    newestOnTop={false}
+                    closeOnClick
+                    rtl={false}
+                    pauseOnFocusLoss
+                    draggable
+                    pauseOnHover
+                    theme="dark"
+                />
             </form>
         </div>
     );

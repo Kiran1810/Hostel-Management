@@ -10,7 +10,7 @@ function TeamPg() {
     const [detail, setDetail] = useState("");
     useEffect(() => {
         axios
-            .get(`https://e-cell-backend2k24.onrender.com/esummit/team/`)
+            .get(`https://e-cell-backend2k24-tppt.onrender.com/esummit/team/`)
             .then((response) => setDetail(response.data))
             .catch((error) => console.log(error));
     }, []);
@@ -18,7 +18,7 @@ function TeamPg() {
 
     return (
         <>
-            <div>
+            <div className="bg-black">
                 <Navbar />
             </div>
             <div className="bg-black">

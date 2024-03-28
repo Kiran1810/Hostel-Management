@@ -52,7 +52,7 @@ function HomePage() {
                     </div>
 
                     <div className="text-center text-gray-300 text-[1rem] lg:text-[3.5rem] mt-4 font-Rocker mb-[2rem]">
-                        <h1>24-26 January </h1>
+                        <h1>5-7 April </h1>
                     </div>
                     <img
                         src={jupiterImage}

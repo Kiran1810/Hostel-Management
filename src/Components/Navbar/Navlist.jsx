@@ -17,11 +17,11 @@ function Navbar() {
             slug: "/",
             active: true,
         },
-        {
-            name: "Scan",
-            slug: "/scan",
-            active: true,
-        },
+        // {
+        //     name: "Scan",
+        //     slug: "/scan",
+        //     active: true,
+        // },
         {
             name: "Our-Team",
             slug: "/Team",

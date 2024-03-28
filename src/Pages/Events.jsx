@@ -8,7 +8,7 @@ function Event() {
     const [event, setEvent] = useState([]);
     useEffect(() => {
         axios
-            .get(`https://e-cell-backend2k24.onrender.com/esummit/event/`)
+            .get(`https://e-cell-backend2k24-tppt.onrender.com/esummit/event/`)
             .then(
                 (response) => (
                     setEvent(response.data),
@@ -29,7 +29,7 @@ function Event() {
                         Our Events
                     </div>
                 </div>
-                <div className=" grid grid-cols-2  lg:grid-cols-4 lg:pl-16">
+                <div className=" grid grid-cols-2  lg:grid-cols-4 lg:pl-16 space-y-4 pl-7">
                     {event &&
                         event.map((event, index) => (
                             <EventCard key={index} {...event} />

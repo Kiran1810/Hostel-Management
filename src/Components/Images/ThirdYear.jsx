@@ -15,7 +15,7 @@ function ThirdYear({
                 alt="img"
                 className="p-0.5 rounded-lg w-64 h-64 "
             />
-            <div className="svg-container absolute bottom-20 lg:right-6 right-2">
+            <div className="svg-container absolute  lg:botton-20 bottom-[90px] lg:right-[75px] right-4 bgColor">
                 <a
                     href={linkedin_url}
                     target="_blank"
@@ -87,8 +87,8 @@ function ThirdYear({
             </div>
 
             <div className="p-2.5">
-                <div className="team ">{name}</div>
-                <div className="team2">{position}</div>
+                <div className="team font-bold">{name}</div>
+                <div className="team2  flex justify-center">{position}</div>
             </div>
         </div>
     );

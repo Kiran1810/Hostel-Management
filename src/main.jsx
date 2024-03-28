@@ -34,7 +34,7 @@ root.render(
                         <Route path="/login" element={<LogInPg />} />
                         <Route path="/team" element={<TeamPg />} />
                         <Route path="/contactUs" element={<ContactUsPage />} />
-                        <Route path="/scan" element={<QRScannerComponent />} />
+                        {/* <Route path="/scan" element={<QRScannerComponent />} /> */}
                     </Routes>
                 </Router>
             </GoogleOAuthProvider>

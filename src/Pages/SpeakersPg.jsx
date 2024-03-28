@@ -8,7 +8,9 @@ function SpeakersPage() {
     const [speaker, setSpeaker] = useState([]);
     useEffect(() => {
         axios
-            .get(`https://e-cell-backend2k24.onrender.com/esummit/speaker/`)
+            .get(
+                `https://e-cell-backend2k24-tppt.onrender.com/esummit/speaker/`
+            )
             .then(
                 (response) => (
                     setSpeaker(response.data),

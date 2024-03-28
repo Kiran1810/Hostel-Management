@@ -16,7 +16,7 @@ function Manager({
                 alt="img"
                 className="p-0.5 rounded-lg w-80 h-80 "
             />
-            <div className="svg-container absolute bottom-20 lg:right-14 right-3">
+            <div className="svg-container absolute bottom-[90px] lg:right-[119px] right-1 bgColor">
                 <a
                     href={linkedin_url}
                     target="_blank"
@@ -98,8 +98,8 @@ function Manager({
             </div>
 
             <div className="p-2.5">
-                <div className="team ">{name}</div>
-                <div className="team2">{position}</div>
+                <div className="team font-bold ">{name}</div>
+                <div className="team2 flex justify-center">{position}</div>
             </div>
         </div>
     );
