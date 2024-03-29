@@ -21,6 +21,8 @@ export function DialogDefault({
     name,
     description,
     prize,
+    image,
+    event_type,
 }) {
     const user = useSelector((state) => state.auth.userData);
     const navigate = useNavigate();
@@ -107,15 +109,15 @@ export function DialogDefault({
             className="flex flex-col lg:w-[1014.691px] lg:h-auto items-center text-white overflow-y-auto space-y-5 over w-44 h-auto"
         >
             <img
-                src={CardIcon}
+                src={image}
                 alt="cardIcon"
-                className=" h-10 w-10  lg:h-44 lg:w-44  mt-5"
+                className=" h-10 w-10  lg:h-44 lg:w-44  mt-5 rounded-lg"
             />
 
             <DialogHeader className="lg:text-5xl text-white text-base font-Rocker lg:p-4 p-0 ">
                 {name}
             </DialogHeader>
-            <DialogBody className="ml-11 mr-11 lg:mb-5 mb-2 lg:p-4 p-0 lg:text-2xl items-center text-xs text-Play">
+            <DialogBody className="ml-11 mr-11 lg:mb-5 mb-2 lg:p-4 p-0 lg:text-2xl items-center text-center text-xs text-Play">
                 {description}
             </DialogBody>
             <DialogFooter className="lg:w-full flex flex-row justify-around">
@@ -125,7 +127,7 @@ export function DialogDefault({
                         alt="loyalty"
                         className="mr-2 lg:14 lg:h-14 w-10 h-10 "
                     />
-                    <div className="font-Play lg:text-3xl ">Team</div>
+                    <div className="font-Play lg:text-3xl ">{event_type}</div>
                     <div className="flex flex-row items-center">
                         <img
                             src={Money}
@@ -165,7 +167,15 @@ export function DialogDefault({
 
 const cards = ["card", "card2", "card3", "card4"];
 
-function EventCard({ name, event_date, description, id, prize }) {
+function EventCard({
+    name,
+    event_date,
+    description,
+    id,
+    prize,
+    event_type,
+    image,
+}) {
     const [activeCardIndex, setActiveCardIndex] = useState(0);
     const [isDialogOpen, setDialogOpen] = useState(false);
 
@@ -190,13 +200,13 @@ function EventCard({ name, event_date, description, id, prize }) {
     return (
         <>
             <div
-                className={`card ${activeCardClass} w-32 h-36 lg:w-80 lg:h-80 text-white flex flex-col   items-center space-y-3  `}
+                className={`card ${activeCardClass} w-32 h-36 lg:w-80 lg:h-80 text-white flex flex-col   items-center justify-center text-center space-y-3  `}
                 onClick={handleCardClick}
             >
                 <img
-                    src={CardIcon}
+                    src={image}
                     alt="cardIcon"
-                    className="h-4 w-4 lg:h-14 lg:w-14 mt-5"
+                    className="h-7 w-7 lg:h-20 lg:w-20 mt-5 rounded"
                 />
                 <div className="ml-8 mr-8 mt-2 pb-3 lg:p-3 space-y-4 text-xs lg:text-3xl">
                     <div className="font-Play">{name}</div>
@@ -212,6 +222,8 @@ function EventCard({ name, event_date, description, id, prize }) {
                 description={description}
                 id={id}
                 prize={prize}
+                image={image}
+                event_type={event_type}
                 isOpen={isDialogOpen}
                 onClose={handleCloseDialog}
             />

@@ -1,6 +1,6 @@
 import React from "react";
 import QueryContactPage from "./queryPage";
-import ContactUs from "../Assets/contactus.png";
+import ContactUs from "../Assets/bg.jpg";
 import Call from "../Assets/call.svg";
 import location from "../Assets/location.svg";
 

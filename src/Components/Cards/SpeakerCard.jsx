@@ -114,10 +114,9 @@ function SpeakerCard({
                     </div>
 
                     <div className="lg:space-y-3 space-y-1 text-white text-xs lg:text-xl mt-2  ">
-                        <div className="font-Play pt-4 lg:pl-7 pl-0 flex justify-center">
+                        <div className="font-Play pt-4  pl-0 flex justify-center text-center">
                             {name}
                         </div>
-                        {/* <div className="font-k2d">To be revealed soon </div> */}
                     </div>
                 </div>
             )}

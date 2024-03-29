@@ -209,7 +209,7 @@ const SparklesCore = (props: ParticlesProps) => {
                                 size: false,
                                 speed: {
                                     min: 0.1,
-                                    max: 1,
+                                    max: 0.1,
                                 },
                                 spin: {
                                     acceleration: 0,
@@ -227,8 +227,8 @@ const SparklesCore = (props: ParticlesProps) => {
                             number: {
                                 density: {
                                     enable: true,
-                                    width: 400,
-                                    height: 400,
+                                    width: 500,
+                                    height: 500,
                                 },
                                 limit: {
                                     mode: "delete",
