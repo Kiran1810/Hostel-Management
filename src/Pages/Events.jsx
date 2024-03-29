@@ -25,7 +25,7 @@ function Event() {
                         alt="group Image"
                         className=" object-contain ml-10 p-5 w-20 h-20 lg:w-[335px] lg:h-[298px] bg-black "
                     />
-                    <div className=" lg:ml-72 ml-0 lg:mb-14 text-blue-300 font-Play text-2xl font-bold leading-normal tracking-wider bg-gradient-to-r from-blue-300 via-blue-800 to-blue-800 bg-clip-text text-transparent   lg:text-transparent lg:bg-gradient-to-r lg:from-blue-300 lg:to-blue-800 lg:bg-clip-text  lg:font-bold lg:text-6xl lg:mt-52 mt-6 sm:pl-24">
+                    <div className=" lg:ml-56 ml-0 lg:mb-14 text-blue-300 flex justify-center font-Play text-2xl font-bold leading-normal tracking-wider bg-gradient-to-r from-blue-300 via-blue-800 to-blue-800 bg-clip-text text-transparent   lg:text-transparent lg:bg-gradient-to-r lg:from-blue-300 lg:to-blue-800 lg:bg-clip-text  lg:font-bold lg:text-6xl lg:mt-52 mt-6 sm:pl-24">
                         Our Events
                     </div>
                 </div>

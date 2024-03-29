@@ -28,13 +28,13 @@ function SpeakersPage() {
     };
 
     return (
-        <div className="bg-black pb-3 pt-2  lg:pt-16 pl-6 lg:pb-28  ">
+        <div className="bg-black pb-3 pt-2  lg:pt-16 pl-6  lg:pb-28  ">
             <div className="flex flex-col-reverse lg:flex-row justify-between  lg:mr-20">
-                <div className="flex flex-col lg:items-center pt-8  lg:ml-10">
-                    <div className=" flex justify-center text-blue-300 text-2xl font-bold leading-normal tracking-wider bg-gradient-to-r from-blue-300 via-blue-800 to-blue-800 bg-clip-text text-transparent   lg:text-transparent lg:bg-gradient-to-r lg:from-blue-300 lg:to-blue-800 lg:bg-clip-text  lg:font-bold lg:text-6xl font-Play ">
+                <div className="flex flex-col  pt-8  lg:ml-10">
+                    <div className=" flex  text-blue-300 text-2xl font-bold leading-normal tracking-wider bg-gradient-to-r from-blue-300 via-blue-800 to-blue-800 bg-clip-text text-transparent   lg:text-transparent lg:bg-gradient-to-r lg:from-blue-300 lg:to-blue-800 lg:bg-clip-text  lg:font-bold lg:text-6xl font-Play ">
                         Acoustic Alchemy:
                     </div>
-                    <div className=" p-6 lg:pl-16 pl-0 lg:w-[700px] font-Roboto lg:text-3xl text-xs text-white ">
+                    <div className=" p-6  pl-0 lg:w-[700px] font-Roboto lg:text-2xl text-xs text-white ">
                         The quintessential gateway to auditory exploration
                         transforms electrical signals into vibrant soundscapes.
                         These technological marvels deliver immersive
@@ -48,7 +48,7 @@ function SpeakersPage() {
                     <img
                         src={SpeakersImage}
                         alt="SpeakersImage"
-                        className="object-contain  w-16 h-20 lg:w-80 lg:h-80"
+                        className="object-contain  w-24 h-24 lg:w-72 lg:h-72"
                     />
                 </div>
             </div>

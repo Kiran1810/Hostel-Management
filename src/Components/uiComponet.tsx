@@ -51,7 +51,10 @@ const SparklesCore = (props: ParticlesProps) => {
     };
 
     return (
-        <motion.div animate={controls} className={cn("opacity-0 h-full w-full", className)}>
+        <motion.div
+            animate={controls}
+            className={cn("opacity-0 h-full w-full", className)}
+        >
             {init && (
                 <Particles
                     id={id || "tsparticles"}
@@ -68,7 +71,7 @@ const SparklesCore = (props: ParticlesProps) => {
                             zIndex: 1,
                         },
 
-                        fpsLimit: 120,
+                        fpsLimit: 50,
                         interactivity: {
                             events: {
                                 onClick: {
@@ -102,7 +105,7 @@ const SparklesCore = (props: ParticlesProps) => {
                             },
                             collisions: {
                                 absorb: {
-                                    speed: 2,
+                                    speed: 1,
                                 },
                                 bounce: {
                                     horizontal: {

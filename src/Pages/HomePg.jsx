@@ -20,7 +20,6 @@ function HomePage() {
                 <SparklesCore />
             </div>
             <div className="relative">
-                {" "}
                 <div
                     className="flex flex-col items-center overflow-hidden lg:h-screen bg-cover bg-center w-full h-full z-[10] "
                     // style={{
@@ -61,7 +60,7 @@ function HomePage() {
                     />
                 </div>
             </div>
-            <div className="relative z-[11]">
+            <div className="relative z-[11] bg-black">
                 <AboutUsPage />
             </div>
 
