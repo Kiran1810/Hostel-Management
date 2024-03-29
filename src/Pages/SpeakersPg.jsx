@@ -52,7 +52,7 @@ function SpeakersPage() {
                     />
                 </div>
             </div>
-            <div className="grid  grid-cols-1 lg:grid-cols-4 lg:gap-x-56 ml-16 mr-20 sm:pl-20">
+            <div className="grid  grid-cols-1 md:grid-cols-2 lg:grid-cols-4 lg:gap-x-8 lg:ml-2 ml-16 mr-20 sm:pl-20">
                 {speaker &&
                     speaker.map((speaker, index) => (
                         <SpeakerCard

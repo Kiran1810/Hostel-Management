@@ -35,15 +35,19 @@ function SpeakerCard({
         >
             {showParagraph ? (
                 <div className="text-white text-xs lg:text-xl font-k2d">
-                    {/* {description} */}
+                    {description}
                 </div>
             ) : (
                 <div className="w-32 h-32 relative">
-                    <img
-                        src={image}
-                        alt="speakerImage"
-                        className="object-contain rounded-full lg:w-32 lg:h-32 w-10 h-10 "
-                    />
+                    <div className="flex justify-center">
+                        {" "}
+                        <img
+                            src={image}
+                            alt="speakerImage"
+                            className="object-contain rounded-full lg:w-32 lg:h-32 w-14 h-14  "
+                        />
+                    </div>
+
                     <div className="svg-container absolute bottom-2 left-44 space-y-8">
                         <a
                             href={linkedin_url}
@@ -109,9 +113,11 @@ function SpeakerCard({
                         </a>
                     </div>
 
-                    <div className="lg:space-y-3 space-y-1 text-white text-xs lg:text-xl mt-2 ">
-                        <div className="font-Play">{/* {name} */}</div>
-                        <div className="font-k2d">To be revealed soon </div>
+                    <div className="lg:space-y-3 space-y-1 text-white text-xs lg:text-xl mt-2  ">
+                        <div className="font-Play pt-4 lg:pl-7 pl-0 flex justify-center">
+                            {name}
+                        </div>
+                        {/* <div className="font-k2d">To be revealed soon </div> */}
                     </div>
                 </div>
             )}

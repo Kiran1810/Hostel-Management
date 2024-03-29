@@ -152,7 +152,9 @@ export function DialogDefault({
                                 </span>
                             )
                         ) : (
-                            <span>Please Login</span>
+                            <span>
+                                <a href="/Login">Please Login</a>
+                            </span>
                         )}
                     </Button>
                 </div>

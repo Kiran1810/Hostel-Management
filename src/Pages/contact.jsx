@@ -12,8 +12,8 @@ function ContactUsPage() {
         >
             <div className="grid lg:grid-cols-2 grid-row-2 mt-11 p-12">
                 <div className="space-y-11">
-                    <div className="text-2xl font-semibold font-Playfair ">
-                        ContactUs
+                    <div className="text-2xl lg:text-6xl font-semibold font-Playfair ">
+                        Contact Us
                     </div>
                     <div className="font-extrabold lg:text-5xl text-xl font-Playfair">
                         For Excellent Proformance we focus on Critical
