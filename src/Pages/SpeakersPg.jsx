@@ -34,7 +34,7 @@ function SpeakersPage() {
                     <div className=" flex  text-blue-300 text-2xl font-bold leading-normal tracking-wider bg-gradient-to-r from-blue-300 via-blue-800 to-blue-800 bg-clip-text text-transparent   lg:text-transparent lg:bg-gradient-to-r lg:from-blue-300 lg:to-blue-800 lg:bg-clip-text  lg:font-bold lg:text-6xl font-Play ">
                         Acoustic Alchemy:
                     </div>
-                    <div className=" p-6  pl-0 lg:w-[700px] font-Roboto lg:text-2xl text-xs text-white ">
+                    <div className=" p-6  pl-0 lg:w-[700px] font-Roboto lg:text-2xl text-sm text-white ">
                         The quintessential gateway to auditory exploration
                         transforms electrical signals into vibrant soundscapes.
                         These technological marvels deliver immersive
