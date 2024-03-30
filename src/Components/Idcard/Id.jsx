@@ -218,7 +218,7 @@ function Id() {
                 )}
                 <Button
                     onClick={handleSubmit}
-                    className="mt-6 bg-blue-950 text-black rounded-lg signUp"
+                    className="mt-6 bg-blue-950 text-white rounded-lg signUp"
                     fullWidth
                     color="white"
                     type="submit"

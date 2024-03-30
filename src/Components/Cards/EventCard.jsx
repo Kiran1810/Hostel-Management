@@ -117,7 +117,7 @@ export function DialogDefault({
             <DialogHeader className="lg:text-5xl text-white text-base font-Rocker lg:p-4 p-0 ">
                 {name}
             </DialogHeader>
-            <DialogBody className="ml-11 mr-11 lg:mb-5 mb-2 lg:p-4 p-0 lg:text-2xl items-center text-center text-xs text-Play">
+            <DialogBody className="ml-11 mr-11 lg:mb-5 mb-2 lg:p-4 p-0 lg:text-2xl items-center text-center text-sm text-Play">
                 {description}
             </DialogBody>
             <DialogFooter className="lg:w-full flex flex-row justify-around">
@@ -182,7 +182,7 @@ function EventCard({
     useEffect(() => {
         const interval = setInterval(() => {
             setActiveCardIndex((prevIndex) => (prevIndex + 1) % cards.length);
-        }, 800);
+        }, 450);
 
         return () => clearInterval(interval);
     }, []);
