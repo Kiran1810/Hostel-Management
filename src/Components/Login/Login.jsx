@@ -62,7 +62,7 @@ function Login() {
                 expires: 30,
             });
             dispatch(login(response.data));
-            navigate("/app");
+            navigate("/");
         } catch (error) {
             console.error("Server authentication error:", error);
             toast("Google login failed. Please try again.");
