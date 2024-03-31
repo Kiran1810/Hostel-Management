@@ -35,25 +35,25 @@ function AboutUsPage() {
             <div className="flex flex-row  text-white justify-center lg:space-x-52 space-x-6 ">
                 <div>
                     <div className="border-b-2 border-blue-500 py-2 lg:text-4xl text-2xl font-Rocker">
-                        10+
+                        04+
                     </div>
                     <div className="py-1 ">Speakers</div>
                 </div>
                 <div>
                     <div className="border-b-2 border-blue-500 py-2 lg:text-4xl text-2xl font-Rocker">
-                        10+
+                        30+
                     </div>
                     <div className="py-1 text-center ">Cities</div>
                 </div>
                 <div>
                     <div className="border-b-2 border-blue-500 py-2 lg:text-4xl text-2xl font-Rocker ">
-                        10+
+                        08+
                     </div>
                     <div className="py-1 text-center">Events</div>
                 </div>
                 <div className="">
                     <div className="border-b-2 border-blue-500 py-2 lg:text-4xl text-2xl font-Rocker">
-                        100+
+                        6000+
                     </div>
                     <div className="py-1 text-center">Students</div>
                 </div>

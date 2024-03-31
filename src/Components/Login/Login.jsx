@@ -7,6 +7,8 @@ import { login } from "../../React-Redux/Auth-Slice";
 import { useDispatch } from "react-redux";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import GoogleLoginButton from "../GoogleLogin/GoogleLogin";
+import { GoogleLogin } from "@react-oauth/google";
 
 function Login() {
     const [userData, setUserData] = useState({
@@ -30,6 +32,39 @@ function Login() {
         } catch (error) {
             console.log(error);
             toast.error("Something went wrong , try again");
+        }
+    };
+
+    const handleGoogleLoginSuccess = async (profile) => {
+        try {
+            console.log("Google login success: profile karan", profile);
+            const credentials = profile.credential;
+
+            const decodedToken = jwtDecode(credentials);
+
+            console.log("kara detail", decodedToken);
+
+            const userDetail = {
+                name: decodedToken.name,
+                email: decodedToken.email,
+                image: decodedToken.picture,
+            };
+
+            const response = await axios.post(
+                "https://e-cell-backend2k24-tppt.onrender.com/esummit/googleauth/",
+                userDetail
+            );
+            console.log("the response from the google auth", response);
+            // dispatch(login(response));
+
+            Cookies.set("myToken", response.data.token.access, {
+                expires: 30,
+            });
+            dispatch(login(response.data));
+            navigate("/app");
+        } catch (error) {
+            console.error("Server authentication error:", error);
+            toast("Google login failed. Please try again.");
         }
     };
 
@@ -89,6 +124,16 @@ function Login() {
                 >
                     Log In
                 </Button>
+
+                <GoogleLoginButton />
+                <GoogleLogin
+                    onSuccess={handleGoogleLoginSuccess}
+                    onError={() =>
+                        // toast("Google login failed. Please try again.")
+                        console.log("there is error")
+                    }
+                    className="mt-4 bg-red-500 text-white hover:bg-red-700 py-2 px-4 rounded"
+                />
                 <ToastContainer
                     position="bottom-right"
                     autoClose={5000}

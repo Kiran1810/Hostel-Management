@@ -24,7 +24,7 @@ function HomePage() {
             const timer = setTimeout(() => {
                 setLoading(false);
                 localStorage.setItem("visitedHomePage", "true");
-            }, 3000);
+            }, 5000);
 
             return () => clearTimeout(timer);
         }

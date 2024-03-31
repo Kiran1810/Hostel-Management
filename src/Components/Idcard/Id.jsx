@@ -5,7 +5,7 @@ import axios from "axios";
 import Cookies from "js-cookie";
 import { Select, Option } from "@material-tailwind/react";
 import { useNavigate } from "react-router-dom";
-import Spinner from "../../Assets/spinner.gif";
+import ClipLoader from "react-spinners/ClipLoader";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -76,8 +76,12 @@ function Id() {
         if (file) {
             setSelectedImage(file);
         }
-        handleUpload();
     };
+    useEffect(() => {
+        if (selectedImage) {
+            handleUpload();
+        }
+    }, [selectedImage]);
 
     const handleUpload = async () => {
         try {
@@ -115,12 +119,21 @@ function Id() {
                         alt="img"
                         className="w-52 h-52 rounded-full"
                     />
+                    {/* {uploading && (
+                        
+                        // <img
+                        //     src={ClipLoader}
+                        //     alt="spinner"
+                        //     className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+                        // />
+
+                        <div><  <ClipLoader />/div>
+                      
+                    )} */}
                     {uploading && (
-                        <img
-                            src={Spinner}
-                            alt="spinner"
-                            className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
-                        />
+                        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                            <ClipLoader color=" #075488" size={50} />
+                        </div>
                     )}
                     <svg
                         width="61"
