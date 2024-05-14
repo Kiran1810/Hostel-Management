@@ -1,8 +1,12 @@
 import React from "react";
-import Login from "../Components/Login/Login";
-import image from "../Assets/hostel.jpg";
+import UserProfile from "../Components/UserProfile/userProfile";
+import image from "../Assets/messpinterest.jpg";
+import { useParams } from "react-router-dom";
 
-function LoginPg() {
+
+
+function SignupPg() {
+    const {studentId}= useParams()
   const flagStyle = {
     backgroundImage: `url(${image})`,
     backgroundSize: "cover",
@@ -15,7 +19,7 @@ function LoginPg() {
       <div className="flex flex-row h-full">
        
         <div className="w-full md:w-1/2 p-8">
-          <Login />
+          <UserProfile id={studentId} />
         </div>
     
         <div className="hidden md:block w-1/2" style={flagStyle}></div>
@@ -24,4 +28,4 @@ function LoginPg() {
   );
 }
 
-export default LoginPg;
+export default SignupPg;

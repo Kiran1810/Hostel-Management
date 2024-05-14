@@ -25,7 +25,7 @@ function Signup() {
         try {
             const response = await axios.post("https://hostelmanagement-cpky.onrender.com/api/student", userData);
             const booking = await axios.post("https://hostelmanagement-cpky.onrender.com/api/booking", { roomid: id, studentid: response.data.student_id });
-           
+           console.log("response",booking)
            
         } catch (error) {
             console.log("Some error in adding the information", error);

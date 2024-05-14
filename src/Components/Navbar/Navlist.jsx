@@ -26,7 +26,17 @@ function Navbar() {
             active: true,
         },
     
-      
+        {
+            name: "General Profile",
+            slug: "/profile",
+            active: true,
+        },
+        {
+            name: "My Booking",
+            slug: "/booking",
+            active: true,
+        },
+        
     ];
 
     return (
