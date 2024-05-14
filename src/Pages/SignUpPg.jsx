@@ -1,6 +1,6 @@
 import React from "react";
 import Signup from "../Components/SignUp/SignUp";
-import image from "../Assets/SignUppageImage.png";
+import image from "../Assets/hostel.jpg";
 
 function SignupPg() {
   const flagStyle = {

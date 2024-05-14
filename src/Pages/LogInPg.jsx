@@ -1,6 +1,6 @@
 import React from "react";
 import Login from "../Components/Login/Login";
-import LoginImg from "../Assets/Login.jpeg";
+import LoginImg from "../Assets/mess.jpg";
 
 function LogInPg() {
     const flagStyle = {

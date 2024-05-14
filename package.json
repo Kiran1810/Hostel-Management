@@ -21,7 +21,7 @@
     "@tsparticles/react": "^3.0.0",
     "@tsparticles/slim": "^3.3.0",
     "@yudiel/react-qr-scanner": "^1.2.4",
-    "axios": "^1.6.3",
+    "axios": "^1.6.8",
     "clsx": "^2.1.0",
     "cookie": "^0.6.0",
     "framer-motion": "^11.0.20",

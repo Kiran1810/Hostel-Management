@@ -2,80 +2,46 @@ import React from "react";
 import axios from "axios";
 import { useState } from "react";
 import { Checkbox, Button, Input } from "@material-tailwind/react";
+import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-import Cookies from "js-cookie";
-import { login } from "../../React-Redux/Auth-Slice";
-import { useDispatch } from "react-redux";
-import GoogleLoginButton from "../GoogleLogin/GoogleLogin";
-import { GoogleLogin } from "@react-oauth/google";
-import { jwtDecode } from "jwt-decode";
+
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 function Signup() {
+    const {id}=useParams()
+    console.log("the id of the room is",id)
     const [userData, setUserData] = useState({
         email: "",
         name: "",
-        password: "",
-        password2: "",
-        number: "",
+        phoneNumber: ""
+        
     });
-    const navigate = useNavigate();
-    const dispatch = useDispatch();
-    const handleFormSubmit = async (e) => {
-        e.preventDefault();
-        try {
-            const response = await axios.post(
-                `https://e-cell-backend2k24-tppt.onrender.com/esummit/register/`,
-                userData
-            );
-            console.log(response);
-            Cookies.set("myToken", response.data.token.access, { expires: 30 });
-            dispatch(login(response.data));
-            navigate("/app");
-        } catch (error) {
-            console.log(error);
-            toast.error("some thing went wrong ,try again");
-        }
-    };
+    const Navigate=useNavigate()
 
-    const handleGoogleLoginSuccess = async (profile) => {
-        try {
-            console.log("Google login success: profile karan", profile);
-            const credentials = profile.credential;
+ const handleFormSubmit=async (e)=>{
+    e.preventDefault();
+    try{
+    const response= await axios.post(`http://localhost:3000/api/student`,userData)
+    console.log("information added",response.data.student_id)
+    const booking=await axios.post(`http://localhost:3000/api/booking`,{roomId:id,studentId:response.data.student_id})
+    console.log("the booking is",booking)
+   toast.success("successfully booked the room");
+   setTimeout(() => {
+    Navigate("/");
+}, 2000); 
 
-            const decodedToken = jwtDecode(credentials);
+ }
+ catch(error){
+    console.log("some error in adding the information",error)
+ }
 
-            console.log("kara detail", decodedToken);
-
-            const userDetail = {
-                name: decodedToken.name,
-                email: decodedToken.email,
-                image: decodedToken.picture,
-            };
-
-            const response = await axios.post(
-                "https://e-cell-backend2k24-tppt.onrender.com/esummit/googleauth/",
-                userDetail
-            );
-            console.log("the response from the google auth", response);
-            // dispatch(login(response));
-
-            Cookies.set("myToken", response.data.token.access, {
-                expires: 30,
-            });
-            dispatch(login(response.data));
-            navigate("/app");
-        } catch (error) {
-            console.error("Server authentication error:", error);
-            toast("Google login failed. Please try again.");
-        }
-    };
-
+  
+}
     return (
         <div className="flex flex-col  h-screen justify-center items-start px-4 space-y-8">
             <div className="font-medium text-5xl">
-                <h1>Sign Up</h1>
+                <h1>User Information</h1>
             </div>
             <form
                 onSubmit={handleFormSubmit}
@@ -117,9 +83,9 @@ function Signup() {
                     />
                 </div>
                 <div className="label">
-                    <label>Password</label>
+                    <label>phoneNumber</label>
                     <Input
-                        type="password"
+                        type="number"
                         className=" text !border !border-gray-300 rounded bg-gray-200 text-gray-900 shadow-lg shadow-gray-900/5 ring-4 ring-transparent placeholder:text-gray-500 focus:!border-gray-900 focus:!border-t-gray-900 focus:ring-gray-900/10"
                         labelProps={{
                             className: "hidden text",
@@ -128,28 +94,12 @@ function Signup() {
                         onChange={(e) =>
                             setUserData({
                                 ...userData,
-                                password: e.target.value,
+                                phoneNumber: e.target.value,
                             })
                         }
                     />
                 </div>
-                <div className="label">
-                    <label>Confirm Password</label>
-                    <Input
-                        type="password"
-                        className=" text !border !border-gray-300 rounded bg-gray-200 text-gray-900 shadow-lg shadow-gray-900/5 ring-4 ring-transparent placeholder:text-gray-500 focus:!border-gray-900 focus:!border-t-gray-900 focus:ring-gray-900/10"
-                        labelProps={{
-                            className: "hidden ",
-                        }}
-                        containerProps={{ className: "min-w-[100px]" }}
-                        onChange={(e) =>
-                            setUserData({
-                                ...userData,
-                                password2: e.target.value,
-                            })
-                        }
-                    />
-                </div>
+                
 
                 <div className="flex items-center">
                     <Checkbox defaultChecked />
@@ -166,10 +116,10 @@ function Signup() {
                     type="submit"
                     onClick={handleFormSubmit}
                 >
-                    Sign Up
+                    Sumbit
                 </Button>
                 <ToastContainer
-                    position="bottom-right"
+                    position="bottom-left"
                     autoClose={5000}
                     hideProgressBar
                     newestOnTop={false}
@@ -181,15 +131,7 @@ function Signup() {
                     theme="dark"
                 />
 
-                <GoogleLoginButton />
-                <GoogleLogin
-                    onSuccess={handleGoogleLoginSuccess}
-                    onError={() =>
-                        // toast("Google login failed. Please try again.")
-                        console.log("there is error")
-                    }
-                    className="mt-4 bg-red-500 text-white hover:bg-red-700 py-2 px-4 rounded"
-                />
+               
             </form>
         </div>
     );
