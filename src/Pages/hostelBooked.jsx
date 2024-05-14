@@ -9,7 +9,7 @@ function HostelRoomBooking() {
 
 
     useEffect(() => {
-        axios.get(`http://localhost:3000/api/room`)
+        axios.get(`https://hostelmanagement-cpky.onrender.com/api/room`)
         .then((response)=>{
              setRooms(response.data.data)
             console.log(response,"response")
@@ -38,7 +38,7 @@ function HostelRoomBooking() {
                        
                             {rooms.map((room, index) => (
                                 <tr key={index}>
-                                    <td  className='font-bold font-Play pt-4 text-center text-gray-900 text-1xl leading-normal tracking-wider bg-gradient-to-r bg-clip-text lg:bg-clip-text  lg:text-2xl '>{room.roomNo}</td>
+                                    <td  className='font-bold font-Play pt-4 text-center text-gray-900 text-1xl leading-normal tracking-wider bg-gradient-to-r bg-clip-text lg:bg-clip-text  lg:text-2xl '>{room.roomno}</td>
                                     <td className='font-bold font-Play pt-4 text-center text-gray-900 text-1xl  leading-normal tracking-wider bg-gradient-to-r bg-clip-text lg:bg-clip-text  lg:text-2xl'>{room.status}</td>
                                     <td className='font-bold font-Play pt-4 text-center text-gray-900 text-1xl  leading-normal tracking-wider bg-gradient-to-r bg-clip-text lg:bg-clip-text  lg:text-2xl'>{room.capacity}</td>
                                     <td>

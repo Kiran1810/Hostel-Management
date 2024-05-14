@@ -20,7 +20,7 @@ function Login() {
         e.preventDefault();
         try {
             const response = await axios.post(
-                `http://localhost:3000/api/booking`,
+                `https://hostelmanagement-cpky.onrender.com/api/booking`,
                 userData
             );
             console.log(response);
